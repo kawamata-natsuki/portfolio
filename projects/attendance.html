@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>勤怠管理アプリ | NATSUKI KAWAMATA</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="site-header__logo">NATSUKI KAWAMATA</div>
+    <nav class="site-header__nav">
+      <ul class="site-header__nav-list">
+        <li><a href="../index.html" class="site-header__nav-link">HOME</a></li>
+        <li><a href="../index.html#projects" class="site-header__nav-link">PROJECTS</a></li>
+        <li><a href="../index.html#skill" class="site-header__nav-link">SKILL</a></li>
+        <li><a href="../index.html#about" class="site-header__nav-link">ABOUT</a></li>
+        <li><a href="../index.html#contact" class="site-header__nav-link">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- メイン -->
+  <main class="project-detail">
+    <div class="project-detail__container">
+      <h1 class="project-detail__title">
+        勤怠管理アプリ
+        <span class="project-detail__tag">Personal</span>
+      </h1>
+
+
+      <!-- スライダーコンテナ -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- 各スライド -->
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen1.png" alt="ログイン画面">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen2.png" alt="会員登録">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen3.png" alt="打刻画面(出勤前画面)">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen4.png" alt="打刻画面(勤務中画面)">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen5.png" alt="打刻画面(休憩中画面)">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen6.png" alt="打刻画面(勤務終了画面)">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen7.png" alt="勤怠一覧画面">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen8.png" alt="勤怠詳細画面（修正申請）">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen9.png" alt="申請一覧（承認待ち）">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen10.png" alt="申請一覧（承認済み）">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen11.png" alt="管理者ログイン画面）">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen12.png" alt="管理者勤怠一覧画面）">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen13.png" alt="管理者スタッフ一覧画面）">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen14.png" alt="管理者申請承認画面）">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/project-attendance/screen15.png" alt="管理者申請一覧画面）">
+          </div>
+        </div>
+        <!-- ナビゲーションボタン -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- ページネーション -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- 期間 -->
+      <section class="project__section">
+        <h2 class="project-detail__heading">期間</h2>
+        <p class="project-detail__text">2025/04 〜 2025/05（1ヶ月半）</p>
+      </section>
+
+      <!-- 概要 -->
+      <section class="project__section">
+        <h2 class="project-detail__heading">概要</h2>
+        <p class="project-detail__text">
+          プログラミングスクールCOACHTECHの課題として制作した勤怠管理アプリです。
+          ログイン・出退勤打刻・勤怠一覧・修正申請・管理者承認など、勤怠管理に必要な基本機能を実装しました。
+        </p>
+      </section>
+
+      <!-- 機能一覧 -->
+      <section class="project__section">
+        <h2 class="project-detail__heading">機能一覧</h2>
+
+        <h3 class="project-detail__subheading">一般ユーザー機能</h3>
+        <ul class="project-detail__list">
+          <li class="project-detail__item">会員登録（Fortify + メール認証）</li>
+          <li class="project-detail__item">ログイン / ログアウト</li>
+          <li class="project-detail__item">バリデーション（FormRequest）、エラーメッセージ表示</li>
+          <li class="project-detail__item">出勤 / 退勤 / 休憩打刻（1日1回制御、複数休憩対応）</li>
+          <li class="project-detail__item">勤怠ステータス表示（勤務外 / 出勤中 / 休憩中 / 退勤済）</li>
+          <li class="project-detail__item">勤怠一覧表示（月切り替え、詳細画面遷移）</li>
+          <li class="project-detail__item">勤怠詳細（修正申請フォーム）</li>
+          <li class="project-detail__item">申請一覧（承認待ち / 承認済み）</li>
+        </ul>
+
+        <h3 class="project-detail__subheading">管理者機能</h3>
+        <ul class="project-detail__list">
+          <li class="project-detail__item">管理者ログイン / ログアウト（Fortify）</li>
+          <li class="project-detail__item">全ユーザーの日次勤怠一覧（前日・翌日切り替え）</li>
+          <li class="project-detail__item">スタッフ別月次勤怠一覧（前月・翌月切り替え、CSV出力）</li>
+          <li class="project-detail__item">勤怠詳細の確認 / 直接修正（バリデーション付き）</li>
+          <li class="project-detail__item">修正申請一覧（承認待ち / 承認済み）</li>
+          <li class="project-detail__item">修正申請詳細 / 承認処理</li>
+          <li class="project-detail__item">スタッフ一覧（氏名・メールアドレス表示）</li>
+        </ul>
+      </section>
+
+      <!-- 使用技術 -->
+      <section class="project__section">
+        <h2 class="project-detail__heading">使用技術</h2>
+        <ul class="project-detail__list">
+          <li class="project-detail__item">Laravel 9 / PHP 8.x</li>
+          <li class="project-detail__item">Docker / Docker Compose</li>
+          <li class="project-detail__item">MySQL</li>
+          <li class="project-detail__item">Bladeテンプレート + CSS / JavaScript</li>
+          <li class="project-detail__item">npm / Node.js（リアルタイム時計処理）</li>
+          <li class="project-detail__item">GitHub</li>
+        </ul>
+      </section>
+
+      <section class="project__section">
+        <h2 class="project-detail__heading">今後の改善・追加予定</h2>
+        <ul class="project-detail__list">
+          <li class="project-detail__item">カレンダー機能（シフトや勤務日をカレンダー表示）</li>
+          <li class="project-detail__item">未打刻に対応した新規レコード作成機能</li>
+          <li class="project-detail__item">勤怠時間のグラフ化・統計表示</li>
+        </ul>
+      </section>
+
+      <!-- GitHub -->
+      <section class="project__section">
+        <p class="project-detail__text">
+          <a href="https://github.com/kawamata-natsuki/coachtech-attendance.git" target="_blank"
+            class="project-detail__button">
+            <i class="fab fa-github"></i> GitHubでソースコードを見る
+          </a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p>&copy; 2025 NATSUKI KAWAMATA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- トップに戻るボタン -->
+  <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    const backToTopBtn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NATSUKI KAWAMATA | Web Developer Portfolio</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="site-header__logo">NATSUKI KAWAMATA</div>
+    <nav class="site-header__nav">
+      <ul class="site-header__nav-list">
+        <li><a href="#home" class="site-header__nav-link">HOME</a></li>
+        <li><a href="#projects" class="site-header__nav-link">PROJECTS</a></li>
+        <li><a href="#skill" class="site-header__nav-link">SKILL</a></li>
+        <li><a href="#about" class="site-header__nav-link">ABOUT</a></li>
+        <li><a href="#contact" class="site-header__nav-link">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ヒーロー -->
+  <section id="home" class="section home-section">
+    <div class="home-section__content">
+      <h1 class="home-section__title">KAWAMATA NATSUKI</h1>
+      <p class="home-section__sub-title">WEB ENGINEER</p>
+    </div>
+
+    <!-- アニメーション背景 -->
+    <div class="home-bg">
+      <ul class="home-bg__shapes">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- メイン -->
+  <main class="site-main">
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects-section">
+      <h2 class="projects-section__title">My Projects</h2>
+
+      <div class="projects-single">
+        <!-- 勤怠管理アプリ -->
+        <div class="project-card project-card--large">
+          <a href="projects/attendance.html">
+            <img src="images/project-attendance/project-attendance.png" alt="勤怠管理アプリ" class="project-card__img">
+            <div class="project-card__body">
+              <h3 class="project-card__title">勤怠管理アプリ</h3>
+              <p class="project-card__desc">
+                オンラインスクールCOACHTECHの課題で作成<br>
+                Laravel × Docker × MySQLを用いた勤怠管理アプリ
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILL -->
+    <section id="skill" class="section skill-section">
+      <h2 class="skill-section__title">Skill</h2>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
+      <h2 class="about-section__title">About Me</h2>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <h2 class="contact-section__title">Contact</h2>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p>&copy; 2025 NATSUKI KAWAMATA. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
