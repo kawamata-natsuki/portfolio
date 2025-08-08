@@ -159,6 +159,22 @@
   }
 }
 
+/* セクション共通 */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px 0 20px;
+  background-color: #f9f9f9;
+}
+
+.section__title {
+  font-size: 2rem;
+  margin: 40px 0;
+  color: #333;
+  text-transform: uppercase;
+}
+
 /* ===== MAIN & FOOTER ===== */
 .site-main {
   padding: 100px 20px 50px;
@@ -175,25 +191,14 @@
 }
 
 /* ===== PROJECTS SECTION ===== */
-.projects-section {
-  text-align: center;
-  padding: 80px 20px;
-  background-color: #f9f9f9;
-}
-
-.projects-section__title {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #333;
-  text-transform: uppercase;
-}
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .project-card {
@@ -202,6 +207,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s;
+  width: 100%;
+  max-width: 480px;
 }
 
 .project-card__img {
@@ -214,9 +221,8 @@
 
 .project-card__img {
   width: 100%;
-  max-height: 320px;
-  object-fit: contain;
-  object-position: 50% -30px;
+  height: 300px;
+  object-fit: cover;
   background-color: #f4f4f4;
   display: block;
 }
@@ -243,29 +249,175 @@
   transition: color 0.3s;
 }
 
-/* ===== PROJECT SINGLE LAYOUT ===== */
-.projects-single {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 900px;
-  padding: 0 20px;
-}
-
-.project-card--large {
-  width: 100%;
-  max-width: 700px;
-}
-
-.project-card--large .project-card__img {
-  height: 300px;
-  object-fit: cover;
-}
-
 /* ===== SKILL SECTION ===== */
-.skill-section__title {
-  text-transform: uppercase;
+.skill-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.skill-category-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.4rem;
+  text-align: left;
+  gap: 8px;
+  padding: 0 20px;
+  margin: 12px 0;
+}
+
+.category-icon {
+  background-color: #f5b041;
+  color: #fff;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.skill-list__cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.skill-card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.skill-card__icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.skill-card__title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.skill-card__stars {
+  letter-spacing: -2px;
+}
+
+.skill-star {
+  color: #e6b800;
+  font-size: 1rem;
+  display: inline-block;
+  line-height: 1;
+  margin: 0 1px;
+  cursor: default;
+}
+
+.skill-card__description {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: left;
+  flex-grow: 1;
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-card__description-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.4rem;
+}
+
+.list-icon {
+  color: #f4511e;
+  flex-shrink: 0;
+  margin-top: 0.35em;
+  font-size: 1rem;
+}
+
+.skill-rating-guide {
+  padding: 16px;
+  margin-top: 12px;
+  max-width: 250px;
+  background-color: #f3f3f3;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  margin-left: 20px;
+}
+
+.skill-rating-guide__title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.skill-rating-guide__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.skill-rating-guide__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.star-guide {
+  color: #e6b800;
+  font-size: 0.9rem;
+  line-height: 1;
+  margin-right: 1px;
+  letter-spacing: -0.03em;
+}
+
+.skill-rating-guide__label {
+  margin-left: 4px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  z-index: 1000;
+  display: none;
+  /* 初期は非表示 */
+  pointer-events: none;
+}
+
+.tooltip.show {
+  display: block;
+}
+
 
 /* ===== ABOUT SECTION ===== */
 .about-section__title {
@@ -276,6 +428,62 @@
 .contact-section__title {
   text-transform: uppercase;
 }
+
+.contact-section__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.contact-section__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  gap: 12px;
+}
+
+.contact-icon,
+.qiita-icon {
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  vertical-align: middle;
+  line-height: 1;
+  position: relative;
+  top: 2px;
+}
+
+.qiita-icon {
+  fill: #55C500;
+}
+
+.contact-section__link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.2;
+  font-size: 1em;
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-section__link:hover {
+  text-decoration: underline;
+}
+
+.contact-section__link:visited {
+  color: #333;
+}
+
+/* ==========================
+     レスポンシブ対応
+========================== */
 
 @media (max-width: 768px) {
   .home-section__title {
