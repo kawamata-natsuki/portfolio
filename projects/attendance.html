@@ -19,16 +19,18 @@
 <body>
   <!-- ヘッダー -->
   <header class="site-header">
-    <div class="site-header__logo">NATSUKI KAWAMATA</div>
-    <nav class="site-header__nav">
-      <ul class="site-header__nav-list">
-        <li><a href="../index.html" class="site-header__nav-link">HOME</a></li>
-        <li><a href="../index.html#projects" class="site-header__nav-link">PROJECTS</a></li>
-        <li><a href="../index.html#skill" class="site-header__nav-link">SKILL</a></li>
-        <li><a href="../index.html#about" class="site-header__nav-link">ABOUT</a></li>
-        <li><a href="../index.html#contact" class="site-header__nav-link">CONTACT</a></li>
-      </ul>
-    </nav>
+    <div class="site-header__inner">
+      <div class="site-header__logo">NATSUKI KAWAMATA</div>
+      <nav class="site-header__nav">
+        <ul class="site-header__nav-list">
+          <li><a href="#home" class="site-header__nav-link">HOME</a></li>
+          <li><a href="#projects" class="site-header__nav-link">PROJECTS</a></li>
+          <li><a href="#skill" class="site-header__nav-link">SKILL</a></li>
+          <li><a href="#about" class="site-header__nav-link">ABOUT</a></li>
+          <li><a href="#contact" class="site-header__nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- メイン -->
@@ -38,7 +40,6 @@
         勤怠管理アプリ
         <span class="project-detail__tag">Personal</span>
       </h1>
-
 
       <!-- スライダーコンテナ -->
       <div class="swiper mySwiper">
@@ -118,9 +119,9 @@
 
         <h3 class="project-detail__subheading">一般ユーザー機能</h3>
         <ul class="project-detail__list">
-          <li class="project-detail__item">会員登録（Fortify + メール認証）</li>
+          <li class="project-detail__item">会員登録（メール認証）</li>
           <li class="project-detail__item">ログイン / ログアウト</li>
-          <li class="project-detail__item">バリデーション（FormRequest）、エラーメッセージ表示</li>
+          <li class="project-detail__item">バリデーション（FormRequest） / エラーメッセージ表示</li>
           <li class="project-detail__item">出勤 / 退勤 / 休憩打刻（1日1回制御、複数休憩対応）</li>
           <li class="project-detail__item">勤怠ステータス表示（勤務外 / 出勤中 / 休憩中 / 退勤済）</li>
           <li class="project-detail__item">勤怠一覧表示（月切り替え、詳細画面遷移）</li>
@@ -144,10 +145,10 @@
       <section class="project__section">
         <h2 class="project-detail__heading">使用技術</h2>
         <ul class="project-detail__list">
-          <li class="project-detail__item">Laravel 9 / PHP 8.x</li>
-          <li class="project-detail__item">Docker / Docker Compose</li>
+          <li class="project-detail__item">Laravel 10 / PHP 8.x</li>
+          <li class="project-detail__item">Docker</li>
           <li class="project-detail__item">MySQL</li>
-          <li class="project-detail__item">Bladeテンプレート + CSS / JavaScript</li>
+          <li class="project-detail__item">JavaScript</li>
           <li class="project-detail__item">npm / Node.js（リアルタイム時計処理）</li>
           <li class="project-detail__item">GitHub</li>
         </ul>
