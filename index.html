@@ -13,16 +13,18 @@
 <body>
   <!-- ヘッダー -->
   <header class="site-header">
-    <div class="site-header__logo">NATSUKI KAWAMATA</div>
-    <nav class="site-header__nav">
-      <ul class="site-header__nav-list">
-        <li><a href="#home" class="site-header__nav-link">HOME</a></li>
-        <li><a href="#projects" class="site-header__nav-link">PROJECTS</a></li>
-        <li><a href="#skill" class="site-header__nav-link">SKILL</a></li>
-        <li><a href="#about" class="site-header__nav-link">ABOUT</a></li>
-        <li><a href="#contact" class="site-header__nav-link">CONTACT</a></li>
-      </ul>
-    </nav>
+    <div class="site-header__inner">
+      <div class="site-header__logo">NATSUKI KAWAMATA</div>
+      <nav class="site-header__nav">
+        <ul class="site-header__nav-list">
+          <li><a href="#home" class="site-header__nav-link">HOME</a></li>
+          <li><a href="#projects" class="site-header__nav-link">PROJECTS</a></li>
+          <li><a href="#skill" class="site-header__nav-link">SKILL</a></li>
+          <li><a href="#about" class="site-header__nav-link">ABOUT</a></li>
+          <li><a href="#contact" class="site-header__nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- ヒーロー -->
@@ -64,7 +66,9 @@
               <h3 class="project-card__title">勤怠管理アプリ</h3>
               <p class="project-card__desc">
                 オンラインスクールCOACHTECHの課題で作成<br>
-                Laravel × Docker × MySQLを用いた勤怠管理アプリ
+                Laravel × Docker × MySQLで開発<br>
+                出勤・退勤の打刻、休憩時間管理、勤怠修正申請、CSV出力機能<br>
+                を備えた勤怠管理アプリ<br>
               </p>
             </div>
           </a>
@@ -72,13 +76,16 @@
 
         <!-- フリマアプリ -->
         <div class="project-card project-card--large">
-          <a href="#">
-            <img src="#" alt="フリマアプリ" class="project-card__img">
+          <a href="projects/fleamarket.html">
+            <img src="images/project-fleamarket/project-fleamarket.png" alt="フリマアプリ"
+              class="project-card__img project-card__img--top">
             <div class="project-card__body">
               <h3 class="project-card__title">フリマアプリ</h3>
               <p class="project-card__desc">
                 オンラインスクールCOACHTECHの課題で作成<br>
-                Laravel × Docker × MySQLを用いたフリマアプリ
+                Laravel × Docker × MySQLで開発<br>
+                出品・購入・コメント・お気に入り機能・チャット機能・決済連携<br>
+                を備えたフリマアプリ
               </p>
             </div>
           </a>
