@@ -83,25 +83,66 @@ body {
 }
 
 /* タイトル */
-.project-detail__title {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 0.6px;
+.project-detail__header {
   text-align: center;
-  position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 12px;
 }
 
-/* タグ */
+.project-detail__title {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  position: relative;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: .6px;
+  margin-bottom: 1.5rem;
+  color: #333;
+
+  padding-left: 78px;
+  z-index: 0;
+  isolation: isolate;
+}
+
+.project-detail__title::before,
+.project-detail__title::after {
+  content: "";
+  position: absolute;
+  border-radius: 20%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* 手前（大）ホワホワ */
+.project-detail__title::before {
+  width: 52px;
+  height: 52px;
+  left: 8px;
+  /* パディング内に配置（負の left は使わない） */
+  top: 8px;
+  background: rgba(252, 176, 69, .25);
+  transform: rotate(15deg);
+}
+
+/* 奥（小）ホワホワ */
+.project-detail__title::after {
+  width: 34px;
+  height: 34px;
+  left: 36px;
+  /* before の右上にちょい重ね */
+  top: -18px;
+  background: rgba(252, 176, 69, .15);
+  transform: rotate(-10deg);
+}
+
+/* タグはそのまま（横に置く場合） */
 .project-detail__tag {
   display: inline-block;
   background: #f5c542;
   color: #fff;
-  font-size: 0.75rem;
-  padding: 0.25rem 0.6rem;
+  font-size: .75rem;
+  padding: .25rem .6rem;
   border-radius: 999px;
-  margin-left: 0.5rem;
-  vertical-align: middle;
   font-weight: 500;
 }
 
