@@ -19,7 +19,7 @@
         <ul class="site-header__nav-list">
           <li><a href="#home" class="site-header__nav-link">HOME</a></li>
           <li><a href="#projects" class="site-header__nav-link">PROJECTS</a></li>
-          <li><a href="#skill" class="site-header__nav-link">SKILL</a></li>
+          <li><a href="#skill" class="site-header__nav-link">SKILLS</a></li>
           <li><a href="#about" class="site-header__nav-link">ABOUT</a></li>
           <li><a href="#contact" class="site-header__nav-link">CONTACT</a></li>
         </ul>
@@ -63,26 +63,32 @@
         <!-- 勤怠管理アプリ -->
         <div class="project-card">
           <a href="projects/attendance.html">
-            <img src="images/project-attendance/project-attendance.png" alt="勤怠管理アプリ" class="project-card__img">
+            <div class="project-card__img">
+              <img src="images/project-attendance/project-attendance.png" alt="勤怠管理アプリ" class="project-card__image-top">
+            </div>
+            <div class="project-card__divider"></div>
             <div class="project-card__body">
-              <h3 class="project-card__title">勤怠管理アプリ</h3>
+              <h3 class="project-card__title">勤怠管理アプリ（学習課題）</h3>
               <p class="project-card__desc">
                 オンラインスクールCOACHTECHの課題で作成<br>
                 Laravel × Docker × MySQLで開発<br>
-                出勤・退勤の打刻、休憩時間管理、勤怠修正申請、CSV出力機能<br>
-                を備えた勤怠管理アプリ<br>
+                出勤・退勤・休憩打刻、修正申請、管理者による承認・修正<br>
+                までを一元管理できるWebアプリ<br>
               </p>
             </div>
           </a>
         </div>
 
         <!-- フリマアプリ -->
-        <div class="project-card project-card--large">
+        <div class="project-card">
           <a href="projects/fleamarket.html">
-            <img src="images/project-fleamarket/project-fleamarket.png" alt="フリマアプリ"
-              class="project-card__img project-card__img--top">
+            <div class="project-card__img">
+              <img src="images/project-fleamarket/project-fleamarket.png" alt="フリマアプリ"
+                class="project-card__image-top project-card__img--custom">
+            </div>
+            <div class="project-card__divider"></div>
             <div class="project-card__body">
-              <h3 class="project-card__title">フリマアプリ</h3>
+              <h3 class="project-card__title">フリマアプリ（学習課題）</h3>
               <p class="project-card__desc">
                 オンラインスクールCOACHTECHの課題で作成<br>
                 Laravel × Docker × MySQLで開発<br>
@@ -94,11 +100,14 @@
         </div>
 
         <!-- 飲食店予約アプリ -->
-        <div class="project-card project-card--large">
+        <div class="project-card">
           <a href="#">
-            <img src="#" alt="フリマアプリ" class="project-card__img">
+            <div class="project-card__img">
+              <img src="#" alt="飲食店予約アプリ" class="project-card__image-top">
+            </div>
+            <div class="project-card__divider"></div>
             <div class="project-card__body">
-              <h3 class="project-card__title">フリマアプリ</h3>
+              <h3 class="project-card__title">飲食店予約アプリ（学習課題）</h3>
               <p class="project-card__desc">
                 オンラインスクールCOACHTECHの課題で作成<br>
                 Laravel × Docker × MySQLを用いたフリマアプリ
@@ -109,9 +118,9 @@
       </div>
     </section>
 
-    <!-- SKILL -->
+    <!-- SKILLS -->
     <section id="skill" class="skill-section section">
-      <h2 class="section__title">SKILL</h2>
+      <h2 class="section__title">MY SKILLS</h2>
 
       <div class="skill-section__content">
 
@@ -514,6 +523,50 @@
       });
     });
 
+    // スクロール関数
+    function smoothScrollTo(targetY, duration = 2000) {
+      const startY = window.scrollY;
+      const distanceY = targetY - startY;
+      let startTime = null;
+
+      function animation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+
+        // easeInOutCubic（加速→減速）
+        const ease = progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+        window.scrollTo(0, startY + distanceY * ease);
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      }
+
+      requestAnimationFrame(animation);
+    }
+
+    // クリック時に呼び出す処理
+    const scrollMargin = 40; // scroll-margin-top と同じ余白
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - scrollMargin; // ← 余白分下げる
+
+          smoothScrollTo(offsetPosition, 1500); // スクロールの時間
+        }
+      });
+    });
   </script>
 </body>
 
