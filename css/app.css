@@ -97,10 +97,9 @@ body {
   right: 20px;
   width: 40px;
   height: 40px;
-  background-color: #ffe07a;
-  /* GitHubボタンと統一 */
-  color: #333;
-  /* 中身は濃いグレーで可読性確保 */
+  background: rgba(0, 0, 0, 0.4);
+  /* 半透明 */
+  color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -119,6 +118,6 @@ body {
 }
 
 .back-to-top:hover {
-  background-color: #f5c542;
+  background: rgba(0, 0, 0, 0.6);
   transform: translateY(-3px);
 }

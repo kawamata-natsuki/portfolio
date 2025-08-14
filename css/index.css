@@ -505,42 +505,120 @@
   text-transform: uppercase;
 }
 
+.about-section__wrapper {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.about-section__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-section__name-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.about-section__name-title {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.about-section__media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section__photo {
+  width: 400px;
+  aspect-ratio: 1 / 1;
+}
+
 /* ===== CONTACT SECTION ===== */
+:root {
+  --icon-size: 20px;
+}
+
 .contact-section__title {
   text-transform: uppercase;
 }
 
-.contact-section__list {
+.contact-section__text {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact-section__email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.contact-section__socials {
   display: flex;
   flex-direction: column;
-  list-style: none;
-  padding: 0;
-}
-
-.contact-section__item {
-  display: flex;
   align-items: center;
-  margin-bottom: 8px;
-  line-height: 1.6;
-  gap: 12px;
+  gap: 8px;
+  margin-top: 20px;
 }
 
-.contact-icon,
-.qiita-icon {
-  width: 1em;
-  height: 1em;
-  font-size: 1em;
+.contact-section__socials-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+.contact-section__social-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  vertical-align: middle;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.contact-section__social-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   line-height: 1;
-  position: relative;
-  top: 2px;
+}
+
+.contact-section__social-link:hover {
+  text-decoration: underline;
+}
+
+.contact-icon {
+  /* Font Awesome */
+  font-size: var(--icon-size);
+  /* サイズはフォントサイズで決定 */
+  width: var(--icon-size);
+  /* ←ラベル前の“箱”を固定幅にして位置を揃える */
+  height: var(--icon-size);
+  display: block;
+  /* ベースラインの影響を排除 */
+  line-height: 1;
+  text-align: center;
 }
 
 .qiita-icon {
+  /* Qiita（SVG） */
+  width: 1.4em;
+  height: 1.4em;
+  display: block;
   fill: #55C500;
 }
 
@@ -554,11 +632,10 @@
   text-decoration: none;
 }
 
-.contact-section__link:hover {
-  text-decoration: underline;
-}
-
-.contact-section__link:visited {
+.contact-section__socials a,
+.contact-section__socials a:hover,
+.contact-section__socials a:visited {
+  text-decoration: none;
   color: #333;
 }
 
