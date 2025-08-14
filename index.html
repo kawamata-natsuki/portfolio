@@ -93,27 +93,26 @@
                 オンラインスクールCOACHTECHの課題で作成<br>
                 Laravel × Docker × MySQLで開発<br>
                 出品・購入・コメント・お気に入り機能・チャット機能・決済連携<br>
-                を備えたフリマアプリ
+                を実装したフリマアプリ
               </p>
             </div>
           </a>
         </div>
 
         <!-- 飲食店予約アプリ -->
-        <div class="project-card">
-          <a href="#">
-            <div class="project-card__img">
-              <img src="#" alt="飲食店予約アプリ" class="project-card__image-top">
-            </div>
-            <div class="project-card__divider"></div>
-            <div class="project-card__body">
-              <h3 class="project-card__title">飲食店予約アプリ（学習課題）</h3>
-              <p class="project-card__desc">
-                オンラインスクールCOACHTECHの課題で作成<br>
-                Laravel × Docker × MySQLを用いたフリマアプリ
-              </p>
-            </div>
-          </a>
+        <div class="project-card project-card--coming-soon">
+          <div class="project-card__img">
+            <img src="images/project-rese/project-rese.png" alt="飲食店予約アプリ"
+              class="project-card__image-top project-card__img--custom">
+          </div>
+          <div class="project-card__divider"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">飲食店予約アプリ（学習課題）</h3>
+            <p class="project-card__desc">
+              COMING SOON...<br>
+              現在開発中のアプリです
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -567,6 +566,26 @@
         }
       });
     });
+
+    // プロジェクトカードの高さ統一
+    function setEqualHeight() {
+      const cards = document.querySelectorAll('.project-card');
+      let maxHeight = 0;
+
+      cards.forEach(card => {
+        card.style.height = 'auto';
+        if (card.offsetHeight > maxHeight) {
+          maxHeight = card.offsetHeight;
+        }
+      });
+
+      cards.forEach(card => {
+        card.style.height = maxHeight + 'px';
+      });
+    }
+
+    window.addEventListener('load', setEqualHeight);
+    window.addEventListener('resize', setEqualHeight);
   </script>
 </body>
 
