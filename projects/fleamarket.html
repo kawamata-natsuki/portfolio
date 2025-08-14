@@ -5,58 +5,223 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>フリマアプリ | NATSUKI KAWAMATA</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <!-- CSS -->
   <link rel="stylesheet" href="../css/app.css">
   <link rel="stylesheet" href="../css/project-detail.css">
 </head>
 
 <body>
+  <!-- ヘッダー -->
   <header class="site-header">
-    <a href="../index.html" class="site-header__logo">NATSUKI KAWAMATA</a>
-    <nav class="site-header__nav">
-      <ul>
-        <li><a href="../index.html#home">HOME</a></li>
-        <li><a href="../index.html#projects">PROJECTS</a></li>
-      </ul>
-    </nav>
+    <div class="site-header__inner">
+      <div class="site-header__logo">NATSUKI KAWAMATA</div>
+      <nav class="site-header__nav">
+        <ul class="site-header__nav-list">
+          <li><a href="../index.html#home" class="site-header__nav-link">HOME</a></li>
+          <li><a href="../index.html#projects" class="site-header__nav-link">PROJECTS</a></li>
+          <li><a href="../index.html#skill" class="site-header__nav-link">SKILLS</a></li>
+          <li><a href="../index.html#about" class="site-header__nav-link">ABOUT</a></li>
+          <li><a href="../index.html#contact" class="site-header__nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- メイン -->
   <main class="project-detail">
-    <h1 class="project-detail__title">フリマアプリ</h1>
+    <div class="project-detail__container">
+      <div class="project-detail__header">
+        <h1 class="project-detail__title">
+          フリマアプリ
+          <span class="project-detail__tag">Coursework</span>
+        </h1>
+      </div>
 
-    <div class="project-detail__image">
-      <img src="../images/furima-sample.png" alt="フリマアプリのスクリーンショット">
+      <!-- スライダーコンテナ -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- 各スライド -->
+          <div class="swiper-slide" data-caption="ログイン">
+            <img src="../images/project-fleamarket/screen1.png" alt="ログイン">
+          </div>
+          <div class="swiper-slide" data-caption="会員登録">
+            <img src="../images/project-fleamarket/screen2.png" alt="会員登録">
+          </div>
+          <div class="swiper-slide" data-caption="商品一覧">
+            <img src="../images/project-fleamarket/screen3.png" alt="商品一覧">
+          </div>
+          <div class="swiper-slide" data-caption="商品詳細①">
+            <img src="../images/project-fleamarket/screen4-1.png" alt="商品詳細①">
+          </div>
+          <div class="swiper-slide" data-caption="商品詳細②">
+            <img src="../images/project-fleamarket/screen4-2.png" alt="商品詳細②">
+          </div>
+          <div class="swiper-slide" data-caption="商品購入">
+            <img src="../images/project-fleamarket/screen5.png" alt="商品購入">
+          </div>
+          <div class="swiper-slide" data-caption="決済（Stripe）">
+            <img src="../images/project-fleamarket/screen6.png" alt="決済（Stripe）">
+          </div>
+          <div class="swiper-slide" data-caption="購入完了">
+            <img src="../images/project-fleamarket/screen7.png" alt="購入完了">
+          </div>
+          <div class="swiper-slide" data-caption="出品①">
+            <img src="../images/project-fleamarket/screen8-1.png" alt="出品①">
+          </div>
+          <div class="swiper-slide" data-caption="出品②">
+            <img src="../images/project-fleamarket/screen8-2.png" alt="出品②">
+          </div>
+          <div class="swiper-slide" data-caption="購入後チャット">
+            <img src="../images/project-fleamarket/screen9.png" alt="購入後チャット">
+          </div>
+          <div class="swiper-slide" data-caption="取引レビュー入力">
+            <img src="../images/project-fleamarket/screen10.png" alt="取引レビュー入力">
+          </div>
+          <div class="swiper-slide" data-caption="マイページ">
+            <img src="../images/project-fleamarket/screen11.png" alt="マイページ">
+          </div>
+          <div class="swiper-slide" data-caption="プロフィール編集（画像トリミング）">
+            <img src="../images/project-fleamarket/screen12.png" alt="プロフィール編集（画像トリミング）">
+          </div>
+        </div>
+        <!-- ナビゲーションボタン -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- ページネーション -->
+        <div class="swiper-pagination"></div>
+        <!-- キャプション -->
+        <div class="swiper-caption" id="swiperCaption"></div>
+      </div>
+
+      <!-- 期間 -->
+      <section class="project__section">
+        <h2 class="project-detail__heading">期間</h2>
+        <p class="project-detail__text">2025/06 〜 2025/07（1.5か月）</p>
+      </section>
+
+      <!-- 概要 -->
+      <section class="project__section">
+        <h2 class="project-detail__heading">概要</h2>
+        <p class="project-detail__text">
+          プログラミングスクールCOACHTECHの課題として制作したフリマアプリです。<br><br>
+          ユーザー登録・ログイン、商品出品・購入、決済（Stripe）連携、コメント・お気に入り登録、取引チャット、レビュー機能など、ECサイトに必要な主要機能を実装しています。<br>
+          また、商品画像やプロフィール画像のトリミング、レビュー平均表示、取引後のチャットでの画像送信など、ユーザー体験を意識したUI改善も行いました。<br><br>
+          実務利用を目的とした完成品ではありませんが、到達度を示す参考として掲載しています。
+        </p>
+      </section>
+
+      <!-- 機能一覧 -->
+      <section class="project__section">
+        <h2 class="project-detail__heading">機能一覧</h2>
+
+        <ul class="project-detail__list">
+          <li class="project-detail__item">会員登録（メール認証） / ログイン / ログアウト</li>
+          <li class="project-detail__item">ログイン / ログアウト</li>
+          <li class="project-detail__item">バリデーション（FormRequest） / エラーメッセージ表示</li>
+          <li class="project-detail__item">商品検索・一覧・詳細表示</li>
+          <li class="project-detail__item">商品出品（画像アップロード）</li>
+          <li class="project-detail__item">商品購入 / Stripe決済</li>
+          <li class="project-detail__item">お気に入り登録</li>
+          <li class="project-detail__item">コメント投稿</li>
+          <li class="project-detail__item">決済（Stripe）連携</li>
+          <li class="project-detail__item">取引チャット（テキスト＋画像送信）</li>
+          <li class="project-detail__item">レビュー投稿 / 平均評価表示</li>
+        </ul>
+      </section>
+
+      <!-- 使用技術 -->
+      <section class="project__section">
+        <h2 class="project-detail__heading">使用技術</h2>
+        <ul class="project-detail__list">
+          <li><strong>バックエンド：</strong>Laravel 8 / PHP 8.x</li>
+          <li><strong>フロントエンド：</strong>HTML / CSS / JavaScript</li>
+          <li><strong>データベース：</strong>MySQL</li>
+          <li><strong>インフラ：</strong>Docker / Nginx</li>
+          <li><strong>バージョン管理：</strong>Git / GitHub</li>
+        </ul>
+      </section>
+
+      <section class="project__section">
+        <h2 class="project-detail__heading">今後の改善アイデア</h2>
+        <p class="project-detail__text">
+          本アプリはオンラインスクール課題として制作したもので、現時点では完成形としています。<br>
+          次回制作時には、以下の機能を追加する予定です。
+        </p>
+        <ul class="project-detail__list">
+          <li class="project-detail__item">商品検索機能（カテゴリ・価格帯・リアルタイム検索対応）</li>
+          <li class="project-detail__item">出品商品の編集・削除機能</li>
+          <li class="project-detail__item">トップページでの通知表示機能</li>
+        </ul>
+      </section>
+
+      <!-- GitHub -->
+      <section class="project__section">
+        <p class="project-detail__text">
+          <a href="https://github.com/kawamata-natsuki/fleamarket-app.git" target="_blank"
+            class="project-detail__button">
+            <i class="fab fa-github"></i> GitHubでソースコードを見る
+          </a>
+        </p>
+      </section>
     </div>
-
-    <section class="project-detail__section">
-      <h2>概要</h2>
-      <p>Laravel + Stripeで構築したフリマアプリです。ユーザー登録・商品出品・購入・決済（Stripe）・お気に入り機能などを実装しました。</p>
-    </section>
-
-    <section class="project-detail__section">
-      <h2>開発期間</h2>
-      <p>2025年3月〜4月（約1ヶ月半）</p>
-    </section>
-
-    <section class="project-detail__section">
-      <h2>使用技術</h2>
-      <ul>
-        <li>Laravel 10</li>
-        <li>Stripe API</li>
-        <li>MySQL</li>
-        <li>Docker</li>
-      </ul>
-    </section>
-
-    <section class="project-detail__section">
-      <h2>リンク</h2>
-      <p><a href="https://github.com/ユーザー名/furima-app" target="_blank">GitHubリポジトリ</a></p>
-    </section>
   </main>
 
+  <!-- フッター -->
   <footer class="site-footer">
-    <p>&copy; 2025 NATSUKI KAWAMATA.</p>
+    <p>&copy; 2025 NATSUKI KAWAMATA/ KOTECH. All Rights Reserved.</p>
   </footer>
+
+  <!-- トップに戻るボタン -->
+  <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    // 元スライドだけ拾ってキャプション配列を作る（複製スライド除外）
+    const originalSlides = document.querySelectorAll(
+      '.mySwiper .swiper-wrapper .swiper-slide:not(.swiper-slide-duplicate)'
+    );
+    const captions = Array.from(originalSlides).map(s =>
+      s.dataset.caption || (s.querySelector('img')?.alt ?? '')
+    );
+
+    const captionEl = document.getElementById('swiperCaption');
+    const setCaption = () => {
+      captionEl.textContent = captions[swiper.realIndex] || '';
+    };
+
+    // 初期表示 & スライド切替時に更新
+    setCaption();
+    swiper.on('slideChange', setCaption);
+
+    // ページトップに戻る
+    const backToTopBtn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+  </script>
 </body>
 
 </html>
