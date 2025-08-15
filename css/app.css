@@ -27,13 +27,13 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
-  background: rgba(0, 0, 0, 0.8);
+  height: 80px;
+  background: #333;
   z-index: 1000;
 }
 
 .site-header__inner {
-  max-width: 1540px;
+  max-width: min(1200px, 90%);
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -41,11 +41,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
 }
 
 .site-header__logo {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--light-text);
 }
@@ -59,7 +58,7 @@ body {
 .site-header__nav-link {
   color: var(--light-text);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -70,54 +69,20 @@ body {
 
 /* ===== FOOTER ===== */
 .site-footer {
-  background: linear-gradient(to bottom, #333 0%, #222 100%);
-  color: #fff;
+  background: #333;
+  color: var(--light-text);
   text-align: center;
   padding: 2rem 1rem 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
-.footer-section {
-  padding: 1.5rem 0;
-}
-
-.footer-section:nth-child(1) {
-  background: #f7f7f7;
-}
-
-.footer-section:nth-child(2) {
-  background: #eeeeee;
-}
-
-/* トップに戻るボタン */
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.4);
-  /* 半透明 */
-  color: #fff;
-  border-radius: 50%;
+.site-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  text-decoration: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s, transform 0.2s;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.back-to-top.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.back-to-top:hover {
-  background: rgba(0, 0, 0, 0.6);
-  transform: translateY(-3px);
 }
