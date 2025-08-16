@@ -17,6 +17,7 @@
   <header class="site-header">
     <div class="site-header__inner">
       <div class="site-header__logo">NATSUKI KAWAMATA</div>
+
       <nav class="site-header__nav">
         <ul class="site-header__nav-list">
           <li><a href="#home" class="site-header__nav-link">HOME</a></li>
@@ -538,9 +539,16 @@
         tooltip.classList.add('show');
       });
 
-      group.addEventListener('mousemove', e => {
-        tooltip.style.top = `${e.pageY + 10}px`;
-        tooltip.style.left = `${e.pageX + 10}px`;
+      group.addEventListener('mousemove', (e) => {
+        const pad = 10;
+        const tipW = tooltip.offsetWidth || 200;
+        const maxLeft = window.scrollX + window.innerWidth - tipW - pad;
+
+        let left = e.pageX + pad;
+        if (left > maxLeft) left = maxLeft;
+
+        tooltip.style.left = `${left}px`;
+        tooltip.style.top = `${e.pageY + pad}px`;
       });
 
       group.addEventListener('mouseleave', () => {
@@ -630,6 +638,7 @@
 
     window.addEventListener('load', setEqualHeight);
     window.addEventListener('resize', setEqualHeight);
+
   </script>
 </body>
 

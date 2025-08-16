@@ -14,6 +14,13 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Noto Sans JP', sans-serif;
   color: var(--dark-text);
@@ -23,6 +30,7 @@ body {
 
 /* ===== HEADER ===== */
 .site-header {
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -33,7 +41,7 @@ body {
 }
 
 .site-header__inner {
-  max-width: min(1200px, 90%);
+  max-width: 1400px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -49,8 +57,14 @@ body {
   color: var(--light-text);
 }
 
+/* ハンバーガーはPCでは非表示 */
+.nav-toggle {
+  display: none;
+}
+
 .site-header__nav-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   gap: 25px;
 }
@@ -71,18 +85,80 @@ body {
 .site-footer {
   background: #333;
   color: var(--light-text);
-  text-align: center;
-  padding: 2rem 1rem 1rem;
+  padding: 1rem;
   font-size: 1rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-.site-footer__inner {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
+
+/* Large Desktop（1440px〜） */
+@media (min-width: 1440px) {}
+
+/* Desktop（1025px〜1439px） */
+@media (min-width: 1025px) and (max-width: 1439px) {
+
+  /* ===== HEADER ===== */
+  .site-header {
+    height: 70px;
+  }
+
+  .site-header__inner {
+    max-width: 1000px;
+    padding: 0 40px;
+  }
+
+  .site-header__logo {
+    font-size: 1.8rem;
+  }
+
+  .site-header__nav-list {
+    gap: 20px;
+  }
+
+  .site-header__nav-link {
+    font-size: 1.1rem;
+  }
+
+  /* ===== FOOTER ===== */
+  .site-footer {
+    padding: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+}
+
+/* Tablet（768px〜1024px） */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* ===== HEADER ===== */
+  .site-header {
+    height: 70px;
+  }
+
+  .site-header__inner {
+    max-width: 740px;
+    padding: 0;
+  }
+
+  .site-header__logo {
+    font-size: 1.5rem;
+  }
+
+  .site-header__nav-list {
+    gap: 16px;
+  }
+
+  .site-header__nav-link {
+    font-size: 1rem;
+  }
+
+  /* ===== FOOTER ===== */
+  .site-footer {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+
+}
+
+/* Mobile（〜767px） */
+@media (max-width: 767px) {}
