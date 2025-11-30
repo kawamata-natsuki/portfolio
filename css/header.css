@@ -1,0 +1,305 @@
+/* ===== HEADER ===== */
+.site-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: #333;
+  z-index: var(--z-header);
+}
+
+.site-header__inner {
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header__logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--light-text);
+}
+
+/* ハンバーガーはPCでは非表示 */
+body.no-scroll {
+  overflow: hidden;
+}
+
+.site-header__nav-toggle {
+  display: none;
+  /* モバイルのみ表示 */
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--light-text);
+}
+
+.site-header__nav-toggle__bar {
+  height: 2px;
+  background: #fff;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.site-header__nav-drawer__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: var(--z-overlay);
+}
+
+.site-header__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 25px;
+}
+
+.site-header__nav-link {
+  color: var(--light-text);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+  color: rgba(255,255,255,1);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.site-header__nav-link:hover {
+  color: var(--main-yellow-deep);
+}
+
+/* Desktop（1025px〜1439px） */
+@media (min-width: 1025px) and (max-width: 1439px) {
+
+  /* ===== HEADER ===== */
+  .site-header {
+    height: 70px;
+  }
+
+  .site-header__inner {
+    max-width: 1000px;
+    padding: 0 40px;
+  }
+
+  .site-header__logo {
+    font-size: 1.8rem;
+  }
+
+  .site-header__nav-list {
+    gap: 20px;
+  }
+
+  .site-header__nav-link {
+    font-size: 1.1rem;
+  }
+
+}
+
+/* Tablet（640px〜1023px） */
+@media (min-width: 640px) and (max-width: 1023px) {
+
+  /* ===== HEADER ===== */
+  .site-header {
+    height: 70px;
+  }
+
+  .site-header__inner {
+    max-width: 740px;
+    padding: 0;
+  }
+
+  .site-header__logo {
+    font-size: 1.5rem;
+  }
+
+  .site-header__nav-list {
+    gap: 16px;
+  }
+
+  .site-header__nav-link {
+    font-size: 1rem;
+  }
+
+}
+
+/* Mobile（〜639px） */
+@media (max-width: 639px) {
+
+  /* ===== HEADER ===== */
+  .site-header {
+    height: 70px;
+    overflow: visible;
+  }
+
+  .site-header__inner {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px 0 12px;
+    gap: 8px;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-header__logo {
+    font-size: 1rem;
+    flex: 0 1 auto;   
+    min-width: 0; 
+    max-width: calc(100% - 52px); 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    height: 32px;
+  }
+
+  .site-header__nav-drawer__overlay {
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  .site-header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    z-index: var(--z-drawer);
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+  }
+
+  .site-header__nav-toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    z-index: var(--z-toggle);
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    overflow: visible;
+  }
+
+  .site-header__nav-toggle__bar {
+    position: absolute;
+    right: 6px;
+    width: 18px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: right center;
+    margin-top: -1px;
+  }
+
+  .site-header__nav-toggle__bar:nth-child(1) {
+    top: 9px;
+  }
+
+  .site-header__nav-toggle__bar:nth-child(2) {
+    top: 15px;
+  }
+
+  .site-header__nav-toggle__bar:nth-child(3) {
+    top: 21px;
+  }
+
+  .site-header__nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .site-header__nav-link {
+    display: block;
+    width: 100%;
+    padding: 12px 2px;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,1);
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  /* 開いたときの状態 */
+  body.nav-open .site-header__nav {
+    transform: translateX(0);
+    box-sizing: border-box;
+  }
+
+  body.nav-open .site-header__nav-drawer__overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ハンバーガー → × に変形 */
+  body.nav-open .site-header__nav-toggle__bar {
+    width: 18px;
+    right: auto;
+    left: 50%;
+    transform-origin: center;
+  }
+  
+  body.nav-open .site-header__nav-toggle__bar:nth-child(1) {
+    top: 15px;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  
+  body.nav-open .site-header__nav-toggle__bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  body.nav-open .site-header__nav-toggle__bar:nth-child(3) {
+    top: 15px;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  
+  /* ×変形時の見切れ防止 */
+  body.nav-open .site-header__nav-toggle {
+    overflow: visible;
+  }
+  
+  /* ヘッダー全体の見切れ防止 */
+  body.nav-open .site-header,
+  body.nav-open .site-header__inner {
+    overflow: visible;
+  }
+
+}
+

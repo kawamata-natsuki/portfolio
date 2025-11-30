@@ -5,6 +5,11 @@
   --main-yellow-deep: #f39c12;
   --dark-text: #333;
   --light-text: #fff;
+
+  --z-header: 1000;
+  --z-overlay: 900;
+  --z-drawer: 1100;
+  --z-toggle: 1200;
 }
 
 /* 全体リセット */
@@ -19,6 +24,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,59 +32,6 @@ body {
   color: var(--dark-text);
   background: #fafafa;
   line-height: 1.6;
-}
-
-/* ===== HEADER ===== */
-.site-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: #333;
-  z-index: 1000;
-}
-
-.site-header__inner {
-  max-width: 1400px;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.site-header__logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--light-text);
-}
-
-/* ハンバーガーはPCでは非表示 */
-.nav-toggle {
-  display: none;
-}
-
-.site-header__nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  gap: 25px;
-}
-
-.site-header__nav-link {
-  color: var(--light-text);
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.site-header__nav-link:hover {
-  color: var(--main-yellow-deep);
 }
 
 /* ===== FOOTER ===== */
@@ -97,28 +50,6 @@ body {
 /* Desktop（1025px〜1439px） */
 @media (min-width: 1025px) and (max-width: 1439px) {
 
-  /* ===== HEADER ===== */
-  .site-header {
-    height: 70px;
-  }
-
-  .site-header__inner {
-    max-width: 1000px;
-    padding: 0 40px;
-  }
-
-  .site-header__logo {
-    font-size: 1.8rem;
-  }
-
-  .site-header__nav-list {
-    gap: 20px;
-  }
-
-  .site-header__nav-link {
-    font-size: 1.1rem;
-  }
-
   /* ===== FOOTER ===== */
   .site-footer {
     padding: 0.9rem;
@@ -127,30 +58,8 @@ body {
 
 }
 
-/* Tablet（768px〜1024px） */
-@media (min-width: 768px) and (max-width: 1024px) {
-
-  /* ===== HEADER ===== */
-  .site-header {
-    height: 70px;
-  }
-
-  .site-header__inner {
-    max-width: 740px;
-    padding: 0;
-  }
-
-  .site-header__logo {
-    font-size: 1.5rem;
-  }
-
-  .site-header__nav-list {
-    gap: 16px;
-  }
-
-  .site-header__nav-link {
-    font-size: 1rem;
-  }
+/* Tablet（640px〜1023px） */
+@media (min-width: 640px) and (max-width: 1023px) {
 
   /* ===== FOOTER ===== */
   .site-footer {
@@ -160,5 +69,13 @@ body {
 
 }
 
-/* Mobile（〜767px） */
-@media (max-width: 767px) {}
+/* Mobile（〜639px） */
+@media (max-width: 639px) {
+
+  /* ===== FOOTER ===== */
+  .site-footer {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+
+}

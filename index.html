@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/index.css">
 
   <!-- GoogleSearchConsole で必要だから消さない -->
@@ -21,7 +22,14 @@
     <div class="site-header__inner">
       <div class="site-header__logo">NATSUKI KAWAMATA</div>
 
-      <nav class="site-header__nav">
+      <!-- ハンバーガーボタン -->
+      <button class="site-header__nav-toggle" type="button" aria-label="メニュー" aria-controls="globalNav" aria-expanded="false">
+        <span class="site-header__nav-toggle__bar"></span>
+        <span class="site-header__nav-toggle__bar"></span>
+        <span class="site-header__nav-toggle__bar"></span>
+      </button>
+
+      <nav id="globalNav" class="site-header__nav" aria-hidden="true">
         <ul class="site-header__nav-list">
           <li><a href="#home" class="site-header__nav-link">HOME</a></li>
           <li><a href="#projects" class="site-header__nav-link">PROJECTS</a></li>
@@ -32,6 +40,9 @@
       </nav>
     </div>
   </header>
+
+  <!-- ナビゲーションドロワーのオーバーレイ -->
+  <div class="site-header__nav-drawer__overlay" data-nav-overlay></div>
 
   <!-- ヒーロー -->
   <section id="home" class="home-section">
@@ -504,145 +515,13 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const skillNote = document.getElementById("skillNote");
-      const skillSection = document.getElementById("skill");
-
-      function toggleSkillNote() {
-        const rect = skillSection.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-
-        skillNote.style.display = isVisible ? "block" : "none";
-      }
-
-      toggleSkillNote(); // 初期表示のため
-      window.addEventListener("scroll", toggleSkillNote);
-    });
-  </script>
-
   <div id="tooltip" class="tooltip"></div>
 
-  <script>
-    const descriptions = {
-      5: '実務レベル（何度も実装して自信あり）',
-      4: '応用レベル（一通り使いこなせる）',
-      3: '基礎レベル（簡単な実装ならできる）',
-      2: '初級レベル（基本的な学習は終えた）',
-      1: '入門レベル（初歩的な学習を行った段階）',
-    };
-    const tooltip = document.getElementById('tooltip');
-    const starGroups = document.querySelectorAll('.skill-card__stars');
-
-    starGroups.forEach(group => {
-      const level = group.dataset.level;
-
-      group.addEventListener('mouseenter', e => {
-        tooltip.textContent = descriptions[level];
-        tooltip.classList.add('show');
-      });
-
-      group.addEventListener('mousemove', (e) => {
-        const pad = 10;
-        const tipW = tooltip.offsetWidth || 200;
-        const maxLeft = window.scrollX + window.innerWidth - tipW - pad;
-
-        let left = e.pageX + pad;
-        if (left > maxLeft) left = maxLeft;
-
-        tooltip.style.left = `${left}px`;
-        tooltip.style.top = `${e.pageY + pad}px`;
-      });
-
-      group.addEventListener('mouseleave', () => {
-        tooltip.classList.remove('show');
-      });
-    });
-
-    // スクロール関数
-    function smoothScrollTo(targetY, duration = 2000) {
-      const startY = window.scrollY;
-      const distanceY = targetY - startY;
-      let startTime = null;
-
-      function animation(currentTime) {
-        if (!startTime) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-
-        // easeInOutCubic（加速→減速）
-        const ease = progress < 0.5
-          ? 4 * progress * progress * progress
-          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-
-        window.scrollTo(0, startY + distanceY * ease);
-
-        if (timeElapsed < duration) {
-          requestAnimationFrame(animation);
-        }
-      }
-
-      requestAnimationFrame(animation);
-    }
-
-    // クリック時に呼び出す処理
-    const scrollMargin = 40; // ヘッダー分
-
-    function smoothScrollToEl(el, duration = 1000) {
-      const startY = window.scrollY;
-      let start = null;
-
-      function ease(p) {
-        return p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
-      }
-
-      function step(t) {
-        if (!start) start = t;
-        const p = Math.min((t - start) / duration, 1);
-
-        // ← 毎フレーム、最新の目的地を再計算（レイアウト変化に強い）
-        const targetY = window.scrollY + el.getBoundingClientRect().top - scrollMargin;
-        const maxY = document.documentElement.scrollHeight - window.innerHeight;
-        const dest = Math.min(targetY, maxY);
-
-        const y = startY + (dest - startY) * ease(p);
-        window.scrollTo(0, y);
-
-        if (p < 1) requestAnimationFrame(step);
-      }
-
-      requestAnimationFrame(step);
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        e.preventDefault();
-        const el = document.querySelector(a.getAttribute('href'));
-        if (el) smoothScrollToEl(el, 1000);
-      });
-    });
-
-    // プロジェクトカードの高さ統一
-    function setEqualHeight() {
-      const cards = document.querySelectorAll('.project-card');
-      let maxHeight = 0;
-
-      cards.forEach(card => {
-        card.style.height = 'auto';
-        if (card.offsetHeight > maxHeight) {
-          maxHeight = card.offsetHeight;
-        }
-      });
-
-      cards.forEach(card => {
-        card.style.height = maxHeight + 'px';
-      });
-    }
-
-    window.addEventListener('load', setEqualHeight);
-    window.addEventListener('resize', setEqualHeight);
-
-  </script>
+  <!-- JavaScript -->
+  <script src="js/utils.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
