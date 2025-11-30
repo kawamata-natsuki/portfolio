@@ -2,6 +2,7 @@
 .home-section {
   position: relative;
   height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -651,114 +652,6 @@
 /* ==========================
      レスポンシブ対応
 ========================== */
-/* Tablet（640px〜767px） - 小タブレット・大スマホ */
-@media (min-width: 640px) and (max-width: 767px) {
-  .home-section__title {
-    font-size: 3rem;
-  }
-
-  .home-section__sub-title {
-    font-size: 1.4rem;
-  }
-
-  .section {
-    padding: 30px 16px;
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .section__title {
-    font-size: 1.6rem;
-    padding-left: 60px;
-    margin: 30px 0;
-  }
-
-  .section__title::before {
-    width: 42px;
-    height: 42px;
-  }
-
-  .section__title::after {
-    width: 28px;
-    height: 28px;
-    left: 22px;
-    top: -14px;
-  }
-
-  .projects-grid {
-    padding: 0 16px;
-    gap: 32px;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .project-card {
-    min-width: 0;
-    box-sizing: border-box;
-  }
-
-  .about-section__wrapper {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .about-section__photo {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .skill-section {
-    padding: 20px 16px;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .skill-section__content {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-  }
-
-  .skill-list__cards {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 16px 0;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .skill-card {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-  }
-
-  .skill-category {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .skill-rating-guide {
-    max-width: 100%;
-    margin-left: 0;
-  }
-
-  .contact-section__text {
-    padding: 0 8px;
-  }
-
-  .contact-section__email {
-    padding: 0 8px;
-  }
-}
-
 /* Tablet（768px〜1024px） - タブレット */
 @media (min-width: 768px) and (max-width: 1023px) {
   .home-section__title {
@@ -869,7 +762,7 @@
 
 
 /* Mobile（〜767px） */
-@media (max-width: 639px) {
+@media (max-width: 767px) {
   .home-section__title {
     font-size: 2rem;
   }

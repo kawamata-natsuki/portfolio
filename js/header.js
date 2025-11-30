@@ -44,7 +44,7 @@
       setOpen(false); // 先に閉じる
 
       // モバイル時のヘッダー高さを考慮（70px）
-      const isMobile = window.matchMedia('(max-width: 639px)').matches;
+      const isMobile = window.matchMedia('(max-width: 767px)').matches;
       const scrollMargin = isMobile ? 70 : 40;
 
       setTimeout(() => {
