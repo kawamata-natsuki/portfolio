@@ -651,8 +651,8 @@
 /* ==========================
      レスポンシブ対応
 ========================== */
-/* Tablet（768px〜1024px） */
-@media (min-width: 640px) and (max-width: 1023px) {
+/* Tablet（640px〜767px） - 小タブレット・大スマホ */
+@media (min-width: 640px) and (max-width: 767px) {
   .home-section__title {
     font-size: 3rem;
   }
@@ -663,6 +663,9 @@
 
   .section {
     padding: 30px 16px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .section__title {
@@ -686,11 +689,22 @@
   .projects-grid {
     padding: 0 16px;
     gap: 32px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .project-card {
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .about-section__wrapper {
     grid-template-columns: 1fr;
     gap: 40px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .about-section__photo {
@@ -698,14 +712,158 @@
     max-width: 300px;
   }
 
+  .skill-section {
+    padding: 20px 16px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .skill-section__content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
   .skill-list__cards {
     grid-template-columns: 1fr;
+    gap: 16px;
     padding: 16px 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .skill-card {
     width: 100%;
     max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .skill-category {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .skill-rating-guide {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .contact-section__text {
+    padding: 0 8px;
+  }
+
+  .contact-section__email {
+    padding: 0 8px;
+  }
+}
+
+/* Tablet（768px〜1024px） - タブレット */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home-section__title {
+    font-size: 3rem;
+  }
+
+  .home-section__sub-title {
+    font-size: 1.4rem;
+  }
+
+  .section {
+    padding: 30px 16px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .section__title {
+    font-size: 1.6rem;
+    padding-left: 60px;
+    margin: 30px 0;
+  }
+
+  .section__title::before {
+    width: 42px;
+    height: 42px;
+  }
+
+  .section__title::after {
+    width: 28px;
+    height: 28px;
+    left: 22px;
+    top: -14px;
+  }
+
+  .projects-grid {
+    padding: 0 16px;
+    gap: 32px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .project-card {
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .about-section__wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .about-section__photo {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .skill-section {
+    padding: 20px 16px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .skill-section__content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .skill-list__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 300px;
+    box-sizing: border-box;
+  }
+
+  .skill-category {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .skill-rating-guide {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .contact-section__text {
+    padding: 0 8px;
+  }
+
+  .contact-section__email {
+    padding: 0 8px;
   }
 }
 
@@ -773,8 +931,8 @@
 
   .about-section__wrapper {
     grid-template-columns: 1fr;
-    gap: 24px;
-    margin-top: 12px;
+    gap: 20px;
+    margin-top: 8px;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -783,22 +941,46 @@
   .about-section__photo {
     width: 100%;
     max-width: 280px;
+    margin-bottom: 4px;
+  }
+
+  .about-section__content {
+    gap: 16px;
+    text-align: center;
+  }
+
+  .about-section__header {
+    margin-bottom: 8px;
+  }
+
+  .about-section__name {
+    margin-bottom: 8px;
   }
 
   .about-section__name-text {
     font-size: 1.2rem;
+    display: block;
+    margin-bottom: 8px;
   }
 
   .about-section__name-title {
     font-size: 1rem;
+    display: block;
+    margin-bottom: 0;
   }
 
   .about-section__history {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    padding: 0 8px;
   }
 
   .about-section__history p {
-    line-height: 1.6;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .about-section__history p + p {
+    margin-top: 1.2rem;
   }
 
   .skill-category-title {
