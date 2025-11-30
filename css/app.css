@@ -36,6 +36,14 @@ body {
   line-height: 1.6;
 }
 
+/* ===== MAIN ===== */
+.site-main {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* ===== FOOTER ===== */
 .site-footer {
   background: #333;
@@ -83,17 +91,33 @@ body {
   html,
   body {
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
     overflow-x: hidden;
   }
 
-  * {
-    max-width: 100%;
-  }
-
-  img {
+  /* 画像とメディア要素のみ幅制限 */
+  img,
+  video,
+  canvas,
+  svg,
+  iframe {
     max-width: 100%;
     height: auto;
+  }
+
+  /* セクションとコンテナの幅を確実に100%に */
+  .section,
+  .site-main,
+  .projects-grid,
+  .skill-list__cards,
+  .about-section__wrapper,
+  .projects-section,
+  .skill-section,
+  .about-section,
+  .contact-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
 }
