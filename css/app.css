@@ -22,9 +22,11 @@
 html,
 body {
   width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  position: relative;
 }
 
 body {
@@ -76,6 +78,22 @@ body {
   .site-footer {
     padding: 0.8rem;
     font-size: 0.8rem;
+  }
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 
 }
