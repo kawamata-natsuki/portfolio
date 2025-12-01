@@ -237,7 +237,6 @@
   transition: transform 0.3s;
   width: 100%;
   max-width: 480px;
-  align-self: start;
 }
 
 .project-card__divider {
@@ -367,6 +366,7 @@
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: stretch;
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px 0;
@@ -381,10 +381,11 @@
   border-radius: 8px;
   padding: 16px;
   width: 100%;
-  max-width: 100%;
+  max-width: 350px;
   height: 100%;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  justify-self: start;
 }
 
 .skill-card__header {
@@ -614,12 +615,15 @@
   font-size: var(--icon-size);
   /* サイズはフォントサイズで決定 */
   width: var(--icon-size);
-  /* ←ラベル前の“箱”を固定幅にして位置を揃える */
+  /* ←ラベル前の"箱"を固定幅にして位置を揃える */
   height: var(--icon-size);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* ベースラインの影響を排除 */
   line-height: 1;
   text-align: center;
+  margin-top: 2px; /* アイコンを少し下げて画像の文字と揃える */
 }
 
 .qiita-icon {
@@ -638,6 +642,13 @@
   font-size: 1em;
   color: #333;
   text-decoration: none;
+}
+
+.contact-section__email-image {
+  height: var(--icon-size);
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .contact-section__socials a,
@@ -734,7 +745,7 @@
 
   .skill-card {
     width: 100%;
-    max-width: 100%;
+    max-width: calc(50% - 8px);
     min-width: 300px;
     box-sizing: border-box;
   }
