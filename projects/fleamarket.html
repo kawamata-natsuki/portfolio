@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>フリマアプリ | NATSUKI KAWAMATA</title>
   <link rel="icon" href="https://kawamata-natsuki.github.io/portfolio/favicon.ico?v=7" type="image/x-icon">
 
@@ -21,10 +21,15 @@
 
 <body>
   <!-- ヘッダー -->
-  <header class="site-header">
+  <header class="site-header project-detail-header">
     <div class="site-header__inner">
       <div class="site-header__logo">NATSUKI KAWAMATA</div>
-      <nav class="site-header__nav">
+      <!-- BACK TO HOME -->
+      <a href="../index.html" class="back-link">
+        <i class="fas fa-arrow-circle-left fa-xs"></i>
+        <span>Back to Home</span>
+      </a>
+      <nav class="site-header__nav project-detail-nav--hidden">
         <ul class="site-header__nav-list">
           <li><a href="../index.html#home" class="site-header__nav-link">HOME</a></li>
           <li><a href="../index.html#projects" class="site-header__nav-link">PROJECTS</a></li>
@@ -218,13 +223,25 @@
 
     // ページトップに戻る
     const backToTopBtn = document.querySelector('.back-to-top');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.classList.add('show');
-      } else {
-        backToTopBtn.classList.remove('show');
-      }
-    });
+    if (backToTopBtn) {
+      // スクロール時に表示/非表示を切り替え
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      // クリック時にトップへスムーズスクロール
+      backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
   </script>
 
   <!-- JavaScript -->

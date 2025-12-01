@@ -5,6 +5,44 @@ body {
   line-height: 1.6;
 }
 
+/* プロジェクト詳細ページではメニューを非表示 */
+.project-detail-nav--hidden {
+  display: none;
+}
+
+/* BACK TO HOME リンク（ヘッダー内に配置） */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #f9fafb;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.3s, color 0.3s, transform 0.2s;
+  font-weight: 300;
+}
+
+.back-link:hover {
+  opacity: 1;
+  color: #fff;
+  transform: translateX(-3px);
+}
+
+.back-link i {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.back-link img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
 /* スライドエリア全体 */
 .swiper {
   width: 100%;
@@ -80,6 +118,8 @@ body {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  width: calc(100% - 40px);
+  box-sizing: border-box;
 }
 
 /* タイトル */
@@ -221,4 +261,254 @@ body {
 .project-detail__button:hover {
   background-color: #f5c542;
   transform: translateY(-2px);
+}
+
+/* ページトップに戻るボタン */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #f5c542;
+  color: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: #ffd966;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top i {
+  font-size: 20px;
+}
+
+/* ==========================
+     レスポンシブ対応
+========================== */
+/* Tablet（768px〜1024px） - タブレット */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .swiper {
+    padding: 0 30px;
+    padding-bottom: 20px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 24px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 18px;
+  }
+
+  .back-link {
+    font-size: 1rem;
+    gap: 8px;
+  }
+
+  .back-link i {
+    font-size: 1.15rem;
+  }
+
+  .back-link img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .project-detail {
+    padding: 2.5rem 2rem;
+    margin: 90px auto 60px;
+    width: calc(100% - 32px);
+    box-sizing: border-box;
+  }
+
+  .project-detail__title {
+    font-size: 1.7rem;
+    padding-left: 65px;
+  }
+
+  .project-detail__title::before {
+    width: 45px;
+    height: 45px;
+    left: 6px;
+    top: 6px;
+  }
+
+  .project-detail__title::after {
+    width: 30px;
+    height: 30px;
+    left: 30px;
+    top: -15px;
+  }
+
+  .project-detail__heading {
+    font-size: 1.1rem;
+  }
+
+  .project-detail__subheading {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile（〜767px） */
+@media (max-width: 767px) {
+  .swiper {
+    padding: 0 20px;
+    padding-bottom: 15px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 20px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 16px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 4px;
+  }
+
+  .swiper-caption {
+    font-size: 12px;
+    padding: 8px 12px;
+    margin: 12px auto;
+  }
+
+  .back-link {
+    font-size: 0.95rem;
+    gap: 6px;
+  }
+
+  .back-link i {
+    font-size: 1.05rem;
+  }
+
+  .back-link img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .project-detail {
+    padding: 1.5rem 1rem;
+    margin: 80px 16px 40px;
+    border-radius: 8px;
+    width: calc(100% - 32px);
+    box-sizing: border-box;
+  }
+
+  .project-detail__title {
+    font-size: 1.4rem;
+    padding-left: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .project-detail__title::before {
+    width: 36px;
+    height: 36px;
+    left: 4px;
+    top: 4px;
+  }
+
+  .project-detail__title::after {
+    width: 24px;
+    height: 24px;
+    left: 24px;
+    top: -12px;
+  }
+
+  .project-detail__tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .project__section {
+    margin-bottom: 2rem;
+  }
+
+  .project-detail__heading {
+    font-size: 1rem;
+    border-left-width: 4px;
+    padding-left: 0.5rem;
+  }
+
+  .project-detail__subheading {
+    font-size: 0.95rem;
+    padding-left: 0.6rem;
+    border-left-width: 2px;
+  }
+
+  .project-detail__text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .project-detail__list {
+    padding-left: 1rem;
+  }
+
+  .project-detail__item {
+    padding-left: 1.2em;
+    margin-bottom: 0.4rem;
+  }
+
+  .project-detail__button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .back-to-top i {
+    font-size: 18px;
+  }
+}
+
+/* 小さい画面（455px以下） - ページネーションが2段にならないように調整 */
+@media (max-width: 455px) {
+  .swiper-pagination {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 4px;
+    margin: 0 2px;
+    flex-shrink: 0;
+  }
+
+  .swiper-caption {
+    margin-top: 20px;
+  }
 }
