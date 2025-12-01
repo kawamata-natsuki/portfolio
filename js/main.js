@@ -1,5 +1,5 @@
 /**
- * メインの初期化処理（アンカーリンクのスムーススクロール、プロジェクトカードの高さ統一）
+ * メインの初期化処理（アンカーリンクのスムーススクロール、プロジェクトカードとスキルカードの高さ統一）
  */
 
 (function () {
@@ -18,9 +18,10 @@
     });
   });
 
-  // プロジェクトカードの高さ統一
+  // プロジェクトカードとスキルカードの高さ統一
   function initEqualHeight() {
     setEqualHeight();
+    setEqualSkillCardHeight();
   }
 
   window.addEventListener('load', initEqualHeight);
