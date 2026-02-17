@@ -100,6 +100,7 @@ body {
   .projects-grid,
   .skill-list__cards,
   .about-section__wrapper,
+  .works-section,
   .projects-section,
   .skill-section,
   .about-section,
@@ -140,6 +141,7 @@ body {
   /* セクションとコンテナの幅を確実に100%に */
   .section,
   .site-main,
+  .works-section,
   .projects-grid,
   .skill-list__cards,
   .about-section__wrapper,
