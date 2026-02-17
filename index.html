@@ -32,6 +32,7 @@
       <nav id="globalNav" class="site-header__nav" aria-hidden="true">
         <ul class="site-header__nav-list">
           <li><a href="#home" class="site-header__nav-link">HOME</a></li>
+          <li><a href="#utamemo" class="site-header__nav-link">WORKS</a></li>
           <li><a href="#projects" class="site-header__nav-link">PROJECTS</a></li>
           <li><a href="#skill" class="site-header__nav-link">SKILLS</a></li>
           <li><a href="#about" class="site-header__nav-link">ABOUT</a></li>
@@ -49,7 +50,7 @@
     <div class="home-section__content">
       <h1 class="home-section__title">KAWAMATA NATSUKI</h1>
       <span class="home-section__sub-title">
-        WEB ENGINEER | KOTECH
+        WEB & MOBILE ENGINEER | KOTECH
       </span>
     </div>
 
@@ -72,11 +73,73 @@
 
   <!-- メイン -->
   <main class="site-main">
+    <!-- WORKS -->
+    <section id="works" class="works-section section">
+      <h2 class="works-section__title section__title">My Works</h2>
+
+      <div class="projects-grid">
+
+        <!-- FutureSync -->
+        <div class="project-card">
+          <div class="project-card__img">
+            <img src="images/works/work1.png" alt="works"
+              class="project-card__image-top project-card__img--custom">
+          </div>
+          <div class="project-card__divider"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">医療現場向けAI診療記録管理システムの開発</h3>
+            <p class="project-card__desc">
+              既存のAI診療記録生成基盤に対し、<br>
+              生成された診療情報を医療現場で利用可能な形式へ整形・統合し、<br>
+              外部電子カルテシステムと連携する機能の開発・改善を担当しました。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PROJECTS -->
     <section id="projects" class="projects-section section">
       <h2 class="projects-section__title section__title">My Projects</h2>
 
       <div class="projects-grid">
+
+        <!-- UtaMemo -->
+        <div class="project-card">
+          <div class="project-card__img">
+            <img src="images/project-utamemo/feature_graphic.png" alt="UtaMemo"
+              class="project-card__image-top project-card__img--custom">
+          </div>
+          <div class="project-card__divider"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">カラオケ採点記録アプリ UtaMemo</h3>
+            <p class="project-card__desc">
+              Flutter で開発<br>
+              歌詞検索アプリです。<br>
+              歌詞を検索することができます。
+            </p>
+          </div>
+        </div>
+
+        <!-- 飲食店予約アプリ -->
+        <div class="project-card">
+          <div class="project-card__img">
+            <img src="images/project-rese/project-rese.png" alt="飲食店予約アプリ"
+              class="project-card__image-top project-card__img--custom">
+          </div>
+          <div class="project-card__divider"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">飲食店予約・店舗管理アプリ</h3>
+            <p class="project-card__desc">
+              オンラインスクールの飲食店予約アプリの課題をベースに、<br>
+              実務を想定して機能拡張を行ったWeb予約アプリです。<br>
+              Laravel × Docker × MySQLで開発<br>
+              予約機能に加え、店舗運営を支援する管理機能を実装しています。
+            </p>
+          </div>
+        </div>
+ 
+                
         <!-- 勤怠管理アプリ -->
         <div class="project-card">
           <a href="projects/attendance.html">
@@ -116,22 +179,7 @@
           </a>
         </div>
 
-        <!-- 飲食店予約アプリ -->
-        <div class="project-card project-card--coming-soon">
-          <div class="project-card__img">
-            <img src="images/project-rese/project-rese.png" alt="飲食店予約アプリ"
-              class="project-card__image-top project-card__img--custom">
-          </div>
-          <div class="project-card__divider"></div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">飲食店予約アプリ（学習課題）</h3>
-            <p class="project-card__desc">
-              COMING SOON...<br>
-              現在開発中のアプリです
-            </p>
-          </div>
-        </div>
-      </div>
+     </div>
     </section>
 
     <!-- SKILLS -->
@@ -156,8 +204,8 @@
                     <span class="skill-star">★</span>
                     <span class="skill-star">★</span>
                     <span class="skill-star">★</span>
-                    <span class="skill-star">☆</span>
-                    <span class="skill-star">☆</span>
+                    <span class="skill-star">★</span>
+                    <span class="skill-star">★</span>
                   </p>
                 </div>
               </div>
