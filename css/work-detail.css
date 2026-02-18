@@ -1,0 +1,421 @@
+body {
+    background: #f7f7f7;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* ワーク詳細ページではメニューを非表示 */
+  .work-detail-nav--hidden {
+    display: none;
+  }
+    
+  /* メインエリア */
+  .work-detail {
+    max-width: 820px;
+    padding: 3rem 2.5rem;
+    margin: 100px auto 80px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+  }
+  
+  /* タイトル */
+  .work-detail__header {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  
+  .work-detail__title {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: .6px;
+    margin-bottom: 1.5rem;
+    color: #333;
+  
+    padding-left: 78px;
+    z-index: 0;
+    isolation: isolate;
+  }
+  
+  .work-detail__title::before,
+  .work-detail__title::after {
+    content: "";
+    position: absolute;
+    border-radius: 20%;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  /* 手前（大）ホワホワ */
+  .work-detail__title::before {
+    width: 52px;
+    height: 52px;
+    left: 8px;
+    /* パディング内に配置（負の left は使わない） */
+    top: 8px;
+    background: rgba(252, 176, 69, .25);
+    transform: rotate(15deg);
+  }
+  
+  /* 奥（小）ホワホワ */
+  .work-detail__title::after {
+    width: 34px;
+    height: 34px;
+    left: 36px;
+    /* before の右上にちょい重ね */
+    top: -18px;
+    background: rgba(252, 176, 69, .15);
+    transform: rotate(-10deg);
+  }
+  
+  /* タグはそのまま（横に置く場合） */
+  .work-detail__tag {
+    display: inline-block;
+    background: #f5c542;
+    color: #fff;
+    font-size: .75rem;
+    padding: .25rem .6rem;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+
+  /* ==========================
+       メイン画像
+  ========================== */
+  .work-main-image {
+    background: #fafafa;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .work-main-image__img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+    
+  /* ==========================
+       セクション
+  ========================== */
+  .work-detail__section {
+    margin-bottom: 2.5rem;
+  }
+  
+  /* 見出し */
+  .work-detail__heading {
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-left: 6px solid #f5c542;
+    padding-left: 0.6rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.5px;
+    color: #333;
+  }
+  
+  /* サブ見出し（ユーザー向け・管理者向け） */
+  .work-detail__subheading {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0.8rem 0 0.4rem;
+    padding-left: 0.8rem;
+    border-left: 3px solid #ffd966;
+  }
+  
+  /* テキスト・リスト */
+  .work-detail__text {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+  }
+
+  .work-detail__subtext {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+    margin-left: 0.5rem;
+    font-weight: 400;
+  }
+
+  .work-detail__list {
+    list-style: none;
+    padding-left: 1.2rem;
+    margin: 0.3rem 0;
+  }
+  
+  .work-detail__item {
+    list-style: none;
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.3rem;
+  }
+  
+  .work-detail__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  /* ボタン */
+/*
+  .work-detail__button { 
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffe07a;
+    color: #333;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+  
+  .work-detail__button:hover {
+    background-color: #f5c542;
+    transform: translateY(-2px);
+  }
+*/
+  
+  /* ページトップに戻るボタン */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #f5c542;
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .back-to-top:hover {
+    background-color: #ffd966;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .back-to-top i {
+    font-size: 20px;
+  }
+  
+  /* ==========================
+       レスポンシブ対応
+  ========================== */
+  /* Tablet（768px〜1024px） - タブレット */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .swiper {
+      padding: 0 30px;
+      padding-bottom: 20px;
+    }
+  
+    .swiper-button-next,
+    .swiper-button-prev {
+      font-size: 24px;
+    }
+  
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 18px;
+    }
+  
+ 
+    .project-detail {
+      padding: 2.5rem 2rem;
+      margin: 90px auto 60px;
+      width: calc(100% - 32px);
+      box-sizing: border-box;
+    }
+  
+    .project-detail__title {
+      font-size: 1.7rem;
+      padding-left: 65px;
+    }
+  
+    .project-detail__title::before {
+      width: 45px;
+      height: 45px;
+      left: 6px;
+      top: 6px;
+    }
+  
+    .project-detail__title::after {
+      width: 30px;
+      height: 30px;
+      left: 30px;
+      top: -15px;
+    }
+  
+    .project-detail__heading {
+      font-size: 1.1rem;
+    }
+  
+    .project-detail__subheading {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Mobile（〜767px） */
+  @media (max-width: 767px) {
+    .swiper {
+      padding: 0 20px;
+      padding-bottom: 15px;
+    }
+  
+    .swiper-button-next,
+    .swiper-button-prev {
+      font-size: 20px;
+    }
+  
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 16px;
+    }
+  
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 4px;
+    }
+  
+    .swiper-caption {
+      font-size: 12px;
+      padding: 8px 12px;
+      margin: 12px auto;
+    }
+  
+    .project-detail {
+      padding: 1.5rem 1rem;
+      margin: 80px 16px 40px;
+      border-radius: 8px;
+      width: calc(100% - 32px);
+      box-sizing: border-box;
+    }
+  
+    .project-detail__title {
+      font-size: 1.4rem;
+      padding-left: 50px;
+      margin-bottom: 1rem;
+    }
+  
+    .project-detail__title::before {
+      width: 36px;
+      height: 36px;
+      left: 4px;
+      top: 4px;
+    }
+  
+    .project-detail__title::after {
+      width: 24px;
+      height: 24px;
+      left: 24px;
+      top: -12px;
+    }
+  
+    .project-detail__tag {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+    }
+  
+    .project__section {
+      margin-bottom: 2rem;
+    }
+  
+    .project-detail__heading {
+      font-size: 1rem;
+      border-left-width: 4px;
+      padding-left: 0.5rem;
+    }
+  
+    .project-detail__subheading {
+      font-size: 0.95rem;
+      padding-left: 0.6rem;
+      border-left-width: 2px;
+    }
+  
+    .project-detail__text {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+  
+    .project-detail__list {
+      padding-left: 1rem;
+    }
+  
+    .project-detail__item {
+      padding-left: 1.2em;
+      margin-bottom: 0.4rem;
+    }
+  
+    .project-detail__button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  
+    .back-to-top {
+      bottom: 20px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+    }
+  
+    .back-to-top i {
+      font-size: 18px;
+    }
+  }
+  
+  /* 小さい画面（455px以下） - ページネーションが2段にならないように調整 */
+  @media (max-width: 455px) {
+    .swiper-pagination {
+      max-width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+  
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 4px;
+      margin: 0 2px;
+      flex-shrink: 0;
+    }
+  
+    .swiper-caption {
+      margin-top: 20px;
+    }
+  }
