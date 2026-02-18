@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>UtaMemo | NATSUKI KAWAMATA</title>
+  <link rel="icon" href="https://kawamata-natsuki.github.io/portfolio/favicon.ico?v=7" type="image/x-icon">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/components/back-link.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+
+  <script src="../js/utils.js" defer></script>
+  <script src="../js/app.js" defer></script>
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="site-header project-detail-header">
+    <div class="site-header__inner">
+      <div class="site-header__logo">NATSUKI KAWAMATA</div>
+
+      <!-- BACK TO HOME -->
+      <a href="../index.html" class="back-link">
+        <i class="fas fa-arrow-circle-left back-link__icon"></i>
+        <span class="back-link__text">Back to Home</span>
+      </a>
+
+      <nav class="site-header__nav project-detail-nav--hidden">
+        <ul class="site-header__nav-list">
+          <li><a href="../index.html#home" class="site-header__nav-link">HOME</a></li>
+          <li><a href="../index.html#projects" class="site-header__nav-link">PROJECTS</a></li>
+          <li><a href="../index.html#skill" class="site-header__nav-link">SKILLS</a></li>
+          <li><a href="../index.html#about" class="site-header__nav-link">ABOUT</a></li>
+          <li><a href="../index.html#contact" class="site-header__nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メイン -->
+  <main class="project-detail">
+    <div class="project-detail__container">
+      <div class="project-detail__header">
+        <h1 class="project-detail__title">
+          UtaMemo
+          <span class="project-detail__tag">Personal</span>
+        </h1>
+      </div>
+
+      <!-- スライダーコンテナ -->
+      <div class="swiper mySwiper utamemo-swiper">
+        <div class="swiper-wrapper">
+          <!-- 各スライド -->
+          <div class="swiper-slide utamemo-swiper-slide" data-caption="曲一覧画面">
+            <img src="../images/project-utamemo/Screen1.png" alt="曲一覧画面">
+          </div>
+          <div class="swiper-slide utamemo-swiper-slide" data-caption="曲詳細画面">
+            <img src="../images/project-utamemo/Screen2.png" alt="曲詳細画面">
+          </div>
+          <div class="swiper-slide utamemo-swiper-slide" data-caption="採点追加画面">
+            <img src="../images/project-utamemo/Screen3.png" alt="採点追加画面">
+          </div>
+          <div class="swiper-slide utamemo-swiper-slide" data-caption="曲追加画面">
+            <img src="../images/project-utamemo/Screen4.png" alt="曲追加画面">
+          </div>
+        </div>
+        <!-- ナビゲーションボタン -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- ページネーション -->
+        <div class="swiper-pagination"></div>
+        <!-- キャプション -->
+        <div class="swiper-caption" id="swiperCaption"></div>
+      </div>
+
+      <!-- 期間 -->
+      <section class="project-detail__section">
+        <h2 class="project-detail__heading">期間</h2>
+        <p class="project-detail__text">2026/01 〜 現在（ストア公開準備中）</p>
+      </section>
+
+      <!-- 概要 -->
+      <section class="project-detail__section">
+        <h2 class="project-detail__heading">概要</h2>
+        <p class="project-detail__text">
+            カラオケ採点結果の記録および歌いたい楽曲の管理を目的としたモバイルアプリを個人開発しました。<br>
+            単なる記録アプリではなく、「次に歌う一曲を迷わない体験」を提供することを目的とし、継続利用を前提としたMVP設計で要件定義から設計・実装・公開準備まで一貫して担当しました。
+        </p>
+      </section>
+
+      <!-- 機能一覧 -->
+      <section class="project-detail__section">
+        <h2 class="project-detail__heading">主な機能</h2>
+
+        <ul class="project-detail__list">
+          <li class="project-detail__item">楽曲登録時の入力補助（iTunes API連携）</li>
+          <li class="project-detail__item">採点結果の記録・履歴管理（機種情報との紐付け表示）</li>
+          <li class="project-detail__item">カスタムタグ機能（ユーザー独自分類）</li>
+          <li class="project-detail__item">継続利用を促すための起動時サジェスト機能（歌いたい曲リストを通知表示）</li>
+        </ul>
+      </section>
+
+        <!-- 運用設計 -->
+        <section class="project-detail__section">
+          <h2 class="project-detail__heading">運用設計</h2>
+  
+          <ul class="project-detail__list">
+            <li class="project-detail__item">Google AdMob導入による収益モデル設計</li>
+            <li class="project-detail__item">Firebase Crashlytics導入によるクラッシュ監視</li>
+            <li class="project-detail__item">Firebase Analyticsによるイベント設計（個人情報を送信しない設計ポリシーを定義）</li>
+          </ul>
+        </section>
+
+      <!-- 使用技術 -->
+      <section class="project-detail__section">
+        <h2 class="project-detail__heading">使用技術</h2>
+        <ul class="project-detail__list">
+          <li class="project-detail__item">Flutter</li>
+          <li class="project-detail__item">Dart</li>
+          <li class="project-detail__item">Drift</li>
+          <li class="project-detail__item">iTunes API（楽曲入力補助用途）</li>
+          <li class="project-detail__item">Firebase（Analytics / Crashlytics）</li>
+          <li class="project-detail__item">Google AdMob</li>
+        </ul>
+      </section>
+
+      <section class="project-detail__section">
+        <h2 class="project-detail__heading">今後の改善アイデア</h2>
+        <p class="project-detail__text">
+            本アプリはMVP設計を前提に制作しており、現在はストア公開に向け最終調整を行っています。<br>
+            今後は継続利用をさらに高めるため、以下の機能拡張を検討しています。
+        </p>
+        <ul class="project-detail__list">
+          <li class="project-detail__item">クラウド同期機能の導入</li>
+          <li class="project-detail__item">採点結果の高度な分析機能（推移グラフ表示、アーティスト別集計）</li>
+        </ul>
+      </section>
+
+      <!-- GitHub -->
+       <!--  
+      <section class="project-detail__section">
+        <p class="project-detail__text">
+          <a href="#" target="_blank"
+            class="project-detail__button">
+            <i class="fab fa-github"></i> GitHubでソースコードを見る
+          </a>
+        </p>
+      </section>
+      -->
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p>&copy; 2025 NATSUKI KAWAMATA/ KOTECH. All Rights Reserved.</p>
+  </footer>
+
+  <!-- トップに戻るボタン -->
+  <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    // 元スライドだけ拾ってキャプション配列を作る（複製スライド除外）
+    const originalSlides = document.querySelectorAll(
+      '.mySwiper .swiper-wrapper .swiper-slide:not(.swiper-slide-duplicate)'
+    );
+    const captions = Array.from(originalSlides).map(s =>
+      s.dataset.caption || (s.querySelector('img')?.alt ?? '')
+    );
+
+    const captionEl = document.getElementById('swiperCaption');
+    const setCaption = () => {
+      captionEl.textContent = captions[swiper.realIndex] || '';
+    };
+
+    // 初期表示 & スライド切替時に更新
+    setCaption();
+    swiper.on('slideChange', setCaption);
+
+    // ページトップに戻る
+    const backToTopBtn = document.querySelector('.back-to-top');
+    if (backToTopBtn) {
+      // スクロール時に表示/非表示を切り替え
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      // クリック時にトップへスムーズスクロール
+      backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  </script>
+
+</body>
+
+</html>
