@@ -291,6 +291,14 @@
   min-height: 4.5em;
 }
 
+.work-card__tech {
+  flex-grow: 1;
+  color: #555;
+  font-size: 0.85rem;
+  padding: 0px 8px 16px 8px;
+  min-height: 4.5em;
+}
+
 .work-card-link {
   text-decoration: none;
   color: inherit;
