@@ -1,0 +1,28 @@
+  /* BACK TO HOME リンク（ヘッダー内に配置） */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #f9fafb;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.3s, color 0.3s, transform 0.2s;
+    font-weight: 300;
+  }
+  
+  .back-link:hover {
+    opacity: 1;
+    color: #fff;
+    transform: translateX(-3px);
+  }
+
+  .back-link__icon {
+    font-size: 1rem;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  .back-link__text {
+    line-height: 1;
+  }

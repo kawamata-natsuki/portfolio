@@ -10,39 +10,6 @@ body {
   display: none;
 }
 
-/* BACK TO HOME リンク（ヘッダー内に配置） */
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.1rem;
-  color: #f9fafb;
-  text-decoration: none;
-  opacity: 0.9;
-  transition: opacity 0.3s, color 0.3s, transform 0.2s;
-  font-weight: 300;
-}
-
-.back-link:hover {
-  opacity: 1;
-  color: #fff;
-  transform: translateX(-3px);
-}
-
-.back-link i {
-  font-size: 1.3rem;
-  display: flex;
-  align-items: center;
-  line-height: 1;
-  vertical-align: middle;
-}
-
-.back-link img {
-  width: 16px;
-  height: 16px;
-  display: block;
-}
-
 /* スライドエリア全体 */
 .swiper {
   width: 100%;
@@ -320,20 +287,6 @@ body {
     font-size: 18px;
   }
 
-  .back-link {
-    font-size: 1rem;
-    gap: 8px;
-  }
-
-  .back-link i {
-    font-size: 1.15rem;
-  }
-
-  .back-link img {
-    width: 14px;
-    height: 14px;
-  }
-
   .project-detail {
     padding: 2.5rem 2rem;
     margin: 90px auto 60px;
@@ -395,20 +348,6 @@ body {
     font-size: 12px;
     padding: 8px 12px;
     margin: 12px auto;
-  }
-
-  .back-link {
-    font-size: 0.95rem;
-    gap: 6px;
-  }
-
-  .back-link i {
-    font-size: 1.05rem;
-  }
-
-  .back-link img {
-    width: 12px;
-    height: 12px;
   }
 
   .project-detail {
