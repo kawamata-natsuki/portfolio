@@ -79,8 +79,8 @@ body {
 
 /* メインエリア */
 .project-detail {
-  padding: 3.5rem 3.5rem;
-  max-width: 900px;
+  max-width: 820px;
+  padding: 3rem 2.5rem;
   margin: 100px auto 80px;
   background: #fff;
   border-radius: 8px;
@@ -154,7 +154,7 @@ body {
 }
 
 /* セクション */
-.project__section {
+.project-detail__section {
   margin-bottom: 2.5rem;
 }
 
