@@ -139,12 +139,14 @@
           </div>
           <div class="project-card__divider"></div>
           <div class="project-card__body">
-            <h3 class="project-card__title">飲食店予約・店舗管理アプリ</h3>
+            <h3 class="project-card__title">店舗運営を支えるWeb予約・店舗管理システム</h3>
             <p class="project-card__desc">
-              オンラインスクールの飲食店予約アプリの課題をベースに、<br>
-              実務を想定して機能拡張を行ったWeb予約アプリです。<br>
-              Laravel × Docker × MySQLで開発<br>
-              予約機能に加え、店舗運営を支援する管理機能を実装しています。
+              予約・来店管理・売上分析を一貫設計。<br>
+              QRチェックインやNO-SHOW自動判定を実装し、<br>
+              実運用を想定した業務支援基盤を構築。
+            </p>
+            <p class="project-card__tech">
+              Laravel / Docker / MySQL
             </p>
           </div>
         </div>
@@ -210,24 +212,30 @@
                 <img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP Logo" width="48" class="skill-card__icon">
                 <div class="skill-card__info">
                   <h3 class="skill-card__title">PHP</h3>
-                  <p class="skill-card__stars" data-level="3">
+                  <p class="skill-card__stars" data-level="4">
                     <span class="skill-star">★</span>
                     <span class="skill-star">★</span>
                     <span class="skill-star">★</span>
                     <span class="skill-star">★</span>
-                    <span class="skill-star">★</span>
+                    <span class="skill-star">☆</span>
                   </p>
                 </div>
               </div>
               <ul class="skill-card__description">
-                <li class="skill-card__description-item">
-                  <i class="fas fa-circle-check list-icon"></i>
-                  CRUD、条件分岐、フォーム処理、セッションなどを理解
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  CRUD処理・セッション管理・フォーム処理の実装経験
                 </li>
                 <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                  LaravelのベースとしてPHPの文法・仕組みを習得</li>
+                  業務ロジック設計および状態管理設計
+                </li>
                 <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                  簡易的なWebアプリを複数作成
+                  外部API連携・差分取得ロジック・キャッシュ設計
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  状態遷移を考慮したデータ整合性設計
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  責務分離を意識した設計（ビジネスロジック分離）
                 </li>
               </ul>
             </div>
@@ -250,13 +258,47 @@
               </div>
               <ul class="skill-card__description">
                 <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                  DOM操作・イベント制御・Ajaxを理解し活用
+                  DOM操作・イベント制御・非同期通信（Ajax）の実装
                 </li>
                 <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                  Choices.js / flatpickr / Cropper.jsなどのライブラリを導入
+                  Alpine.js を用いたインタラクティブUI構築
                 </li>
                 <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                  動的なUI・UX改善を目的とした機能実装
+                  Chart.js による業務データ可視化
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  Cropper.js による画像トリミング機能実装
+                </li>
+              </ul>
+            </div>
+
+            <!-- Dart -->
+            <div class="skill-card">
+              <div class="skill-card__header">
+                <img src="https://cdn.simpleicons.org/dart/02569B" alt="Dart Logo" width="48" class="skill-card__icon">
+                <div class="skill-card__info">
+                  <h3 class="skill-card__title">Dart</h3>
+                  <p class="skill-card__stars" data-level="2">
+                    <span class="skill-star">★</span>
+                    <span class="skill-star">★</span>
+                    <span class="skill-star">☆</span>
+                    <span class="skill-star">☆</span>
+                    <span class="skill-star">☆</span>
+                  </p>
+                </div>
+              </div>
+              <ul class="skill-card__description">
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  null safetyを考慮した型安全なクラス設計
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  非同期処理（Future / async / await）を用いたAPI連携実装
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  UUIDを用いたデータ構造設計および一意性管理
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  モデル定義およびデータ整形処理の実装
                 </li>
               </ul>
             </div>
@@ -278,51 +320,106 @@
               </div>
               <ul class="skill-card__description">
                 <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                  セマンティックなHTML、レスポンシブ対応、BEM風の命名規則を意識したCSS設計
+                  セマンティックなHTML設計およびアクセシビリティを意識したマークアップ
                 </li>
                 <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                  BladeテンプレートやUIコンポーネントの構築に対応
+                  レスポンシブ設計（PC / Tablet / Mobile対応）およびレイアウト崩れ対策
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  BEMを意識したCSS設計とコンポーネント単位でのスタイル管理
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  UI状態管理（hover / focus / active / focus-visible）の統一設計
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  操作導線・視認性を考慮したユーザビリティ設計
                 </li>
               </ul>
             </div>
           </div>
+        </div>
 
-          <!-- Framework -->
-          <div class="skill-category">
-            <h3 class="skill-category-title">
-              <i class="fas fa-layer-group category-icon"></i> Framework
-            </h3>
-            <div class="skill-list__cards">
-              <div class="skill-card">
-                <div class="skill-card__header">
-                  <img src="https://cdn.simpleicons.org/laravel/EF3B2D" alt="Laravel Logo" width="48"
-                    class="skill-card__icon">
-                  <div class="skill-card__info">
-                    <h3 class="skill-card__title">Laravel</h3>
-                    <p class="skill-card__stars" data-level="4">
-                      <span class="skill-star">★</span>
-                      <span class="skill-star">★</span>
-                      <span class="skill-star">★</span>
-                      <span class="skill-star">★</span>
-                      <span class="skill-star">☆</span>
-                    </p>
-                  </div>
+        <!-- Framework -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">
+            <i class="fas fa-layer-group category-icon"></i> Framework
+          </h3>
+          <div class="skill-list__cards">
+          <!-- Laravel -->
+            <div class="skill-card">
+              <div class="skill-card__header">
+                <img src="https://cdn.simpleicons.org/laravel/EF3B2D" alt="Laravel Logo" width="48"
+                  class="skill-card__icon">
+                <div class="skill-card__info">
+                  <h3 class="skill-card__title">Laravel</h3>
+                  <p class="skill-card__stars" data-level="4">
+                    <span class="skill-star">★</span>
+                    <span class="skill-star">★</span>
+                    <span class="skill-star">★</span>
+                    <span class="skill-star">★</span>
+                    <span class="skill-star">☆</span>
+                  </p>
                 </div>
-                <ul class="skill-card__description">
-                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                    MVC構成・Eloquent・バリデーション・認証・決済などLaravelの主要機能を活用
-                  </li>
-                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                    勤怠・フリマ・予約アプリの個人開発を通じて実践的に習得
-                  </li>
-                  <li class="skill-card__description-item">
-                    <i class="fas fa-circle-check list-icon"></i>
-                    UI/UXの使いやすさやレスポンシブ対応にも配慮した設計を意識
-                  </li>
-                </ul>
               </div>
+              <ul class="skill-card__description">
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  マルチガード認証設計および権限制御実装
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  Service層導入による責務分離およびビジネスロジック整理
+                </li>
+                <li class="skill-card__description-item">
+                  <i class="fas fa-circle-check list-icon"></i>
+                  Queue / Scheduler を用いた非同期処理
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  Eager LoadingによるN+1問題対策およびクエリ最適化
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  Livewire v3 を用いた動的UI構築
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  Filament v3 による管理画面設計
+                </li>
+              </ul>
+            </div>
+            <!-- Flutter -->
+            <div class="skill-card">
+              <div class="skill-card__header">
+                <img src="https://cdn.simpleicons.org/flutter/02569B" alt="Flutter Logo" width="48"
+                  class="skill-card__icon">
+                <div class="skill-card__info">
+                  <h3 class="skill-card__title">Flutter</h3>
+                  <p class="skill-card__stars" data-level="3">
+                    <span class="skill-star">★</span>
+                    <span class="skill-star">★</span>
+                    <span class="skill-star">☆</span>
+                    <span class="skill-star">☆</span>
+                    <span class="skill-star">☆</span>
+                  </p>
+                </div>
+              </div>
+              <ul class="skill-card__description">
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  Providerを用いた状態管理設計および画面構成設計
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  外部API（iTunes API）連携および非同期処理実装
+                </li>
+                <li class="skill-card__description-item">
+                  <i class="fas fa-circle-check list-icon"></i>
+                  Firebase（Crashlytics / Analytics）導入およびイベント設計
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  Google AdMob導入および広告表示制御設計
+                </li>
+                <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                  実機検証およびストア公開準備対応
+                </li>
+              </ul>
             </div>
           </div>
+        </div>
 
           <!-- Tools -->
           <div class="skill-category">
@@ -337,6 +434,34 @@
                     class="skill-card__icon">
                   <div class="skill-card__info">
                     <h3 class="skill-card__title">MYSQL</h3>
+                    <p class="skill-card__stars" data-level="3">
+                      <span class="skill-star">★</span>
+                      <span class="skill-star">★</span>
+                      <span class="skill-star">★</span>
+                      <span class="skill-star">☆</span>
+                      <span class="skill-star">☆</span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="skill-card__description">
+                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                    テーブル設計・リレーション（外部キー）・マイグレーション作成経験
+                  </li>
+                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                    Seederを用いた初期データ投入（実務経験あり）
+                  </li>
+                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                    Laravel Eloquentとの連携を通じたDB操作実装
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Docker -->
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" class="skill-card__icon">
+                  <div class="skill-card__info">
+                    <h3 class="skill-card__title">Docker</h3>
                     <p class="skill-card__stars" data-level="4">
                       <span class="skill-star">★</span>
                       <span class="skill-star">★</span>
@@ -348,38 +473,13 @@
                 </div>
                 <ul class="skill-card__description">
                   <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                    テーブル定義・リレーション（外部キー）・マイグレーション管理を理解
-                  </li>
-                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                    Laravel Eloquentとの連携を通じたDB操作経験あり
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Docker -->
-              <div class="skill-card">
-                <div class="skill-card__header">
-                  <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" class="skill-card__icon">
-                  <div class="skill-card__info">
-                    <h3 class="skill-card__title">Docker</h3>
-                    <p class="skill-card__stars" data-level="3">
-                      <span class="skill-star">★</span>
-                      <span class="skill-star">★</span>
-                      <span class="skill-star">★</span>
-                      <span class="skill-star">☆</span>
-                      <span class="skill-star">☆</span>
-                    </p>
-                  </div>
-                </div>
-                <ul class="skill-card__description">
-                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
                     Laravel × MySQL × Nginx の開発環境をDocker Composeで構築
                   </li>
                   <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                    Dockerfile・Volume・環境変数などの基本設定が可能
+                    Dockerfile編集・Volume設定・環境変数管理の実装経験
                   </li>
                   <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                    Laravel DuskやGDライブラリなど、用途に応じたPHP拡張の追加経験あり
+                    PHP拡張（GD等）の追加や環境トラブル対応経験
                   </li>
                 </ul>
               </div>
@@ -390,24 +490,24 @@
                   <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" class="skill-card__icon">
                   <div class="skill-card__info">
                     <h3 class="skill-card__title">Git/Github</h3>
-                    <p class="skill-card__stars" data-level="3">
+                    <p class="skill-card__stars" data-level="4">
                       <span class="skill-star">★</span>
                       <span class="skill-star">★</span>
                       <span class="skill-star">★</span>
-                      <span class="skill-star">☆</span>
+                      <span class="skill-star">★</span>
                       <span class="skill-star">☆</span>
                     </p>
                   </div>
                 </div>
                 <ul class="skill-card__description">
                   <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                    GitHubで複数のリポジトリ管理や、READMEの整備を実践
+                    Gitの基本操作（clone / commit / branch / pull request）を用いた実務開発経験
                   </li>
                   <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                    Gitの基本操作（clone / commit / branch / pull request）を理解
+                    GitHubでのリポジトリ管理およびREADME整備（個人開発）
                   </li>
                   <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                    SSH接続や.gitignoreの活用など、実践的なGit操作も経験
+                    SSH接続や.gitignoreの活用など、実践的なGit操作経験
                   </li>
                 </ul>
               </div>
@@ -429,14 +529,44 @@
                 </div>
                 <ul class="skill-card__description">
                   <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                    EC2でLaravelアプリのデプロイ準備を進行中
+                    S3を用いた画像アップロード実装
                   </li>
                   <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
-                    今後の本番デプロイに向けたVPC設計やS3活用の検討段階
+                    S3バケット連携およびURL生成ロジック実装
+                  </li>
+                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                    EC2デプロイ環境の構築準備経験
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Redis -->
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <img src="https://cdn.simpleicons.org/redis/DC382D" alt="Redis" width="24" height="24"
+                    class="skill-card__icon">
+                  <div class="skill-card__info">
+                    <h3 class="skill-card__title">Redis</h3>
+                    <p class="skill-card__stars" data-level="3">
+                      <span class="skill-star">★</span>
+                      <span class="skill-star">★</span>
+                      <span class="skill-star">★</span>
+                      <span class="skill-star">☆</span>
+                      <span class="skill-star">☆</span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="skill-card__description">
+                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                    Redisを用いたキャッシュ活用経験
+                  </li>
+                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                    キャッシュ戦略を考慮したサービス実装
                   </li>
                 </ul>
               </div>
             </div>
+
             <div class="skill-rating-guide" id="skillNote">
               <h3 class="skill-rating-guide__title">★ スキル評価基準★</h3>
               <ul class="skill-rating-guide__list">
@@ -446,7 +576,7 @@
                   <span class="star-guide filled">★</span>
                   <span class="star-guide filled">★</span>
                   <span class="star-guide filled">★</span>
-                  <span class="skill-rating-guide__label">：実務レベル</span>
+                  <span class="skill-rating-guide__label">：実務で設計〜実装を主体的に担当し、技術選定や改善提案も可能</span>
                 </li>
                 <li class="skill-rating-guide__item">
                   <span class="star-guide filled">★</span>
@@ -454,7 +584,7 @@
                   <span class="star-guide filled">★</span>
                   <span class="star-guide filled">★</span>
                   <span class="star-guide empty">☆</span>
-                  <span class="skill-rating-guide__label">：実践レベル</span>
+                  <span class="skill-rating-guide__label">：実務で継続的に使用し、単独で実装・利用が可能</span>
                 </li>
                 <li class="skill-rating-guide__item">
                   <span class="star-guide filled">★</span>
@@ -462,7 +592,7 @@
                   <span class="star-guide filled">★</span>
                   <span class="star-guide empty">☆</span>
                   <span class="star-guide empty">☆</span>
-                  <span class="skill-rating-guide__label">：基礎レベル</span>
+                  <span class="skill-rating-guide__label">：実務またはチーム開発で一部実装・利用経験あり</span>
                 </li>
                 <li class="skill-rating-guide__item">
                   <span class="star-guide filled">★</span>
@@ -470,7 +600,7 @@
                   <span class="star-guide empty">☆</span>
                   <span class="star-guide empty">☆</span>
                   <span class="star-guide empty">☆</span>
-                  <span class="skill-rating-guide__label">：初級レベル</span>
+                  <span class="skill-rating-guide__label">：個人開発で実装・利用経験あり</span>
                 </li>
                 <li class="skill-rating-guide__item">
                   <span class="star-guide filled">★</span>
@@ -478,7 +608,7 @@
                   <span class="star-guide empty">☆</span>
                   <span class="star-guide empty">☆</span>
                   <span class="star-guide empty">☆</span>
-                  <span class="skill-rating-guide__label">：入門レベル</span>
+                  <span class="skill-rating-guide__label">：簡易的な実装・利用経験あり</span>
                 </li>
               </ul>
             </div>
