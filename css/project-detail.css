@@ -10,15 +10,22 @@ body {
   display: none;
 }
 
-/* スライドエリア全体 */
+/* スライドエリア全体（画像エリアのみ・pagination/caption は .swiper-extra へ） */
 .swiper {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   position: relative;
   padding: 0 50px;
-  padding-bottom: 30px;
-  margin-bottom: 2rem;
+  padding-bottom: 0;
+}
+
+/* ページネーション・キャプション（swiper 外に配置してナビボタンを画像中央に） */
+.swiper-extra {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 0 50px;
 }
 
 .swiper-slide img {
@@ -29,7 +36,7 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.utamemo-swiper {
+/* .utamemo-swiper { *
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   padding-top: 20px;
 }
@@ -37,7 +44,7 @@ body {
 .utamemo-swiper-slide img {
   box-shadow: none;
 }
-
+/
 /* ナビゲーションボタン */
 .swiper-button-next,
 .swiper-button-prev {
@@ -52,7 +59,6 @@ body {
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   color: #222;
-  transform: scale(1.1);
 }
 
 .swiper-button-prev::after,
@@ -86,6 +92,20 @@ body {
   max-width: 90%;
   margin: 16px auto;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.swiper-coming-soon {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
 }
 
 /* メインエリア */
@@ -285,9 +305,9 @@ body {
 ========================== */
 /* Tablet（768px〜1024px） - タブレット */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .swiper {
+  .swiper,
+  .swiper-extra {
     padding: 0 30px;
-    padding-bottom: 20px;
   }
 
   .swiper-button-next,
@@ -337,9 +357,9 @@ body {
 
 /* Mobile（〜767px） */
 @media (max-width: 767px) {
-  .swiper {
+  .swiper,
+  .swiper-extra {
     padding: 0 20px;
-    padding-bottom: 15px;
   }
 
   .swiper-button-next,
