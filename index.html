@@ -125,7 +125,7 @@
                 次に歌う一曲を迷わず選べる体験を設計しました。
               </p>
               <p class="project-card__tech">
-                Flutter / Drift / Firebase Analytics
+                Flutter /  SQLite（Drift） / Firebase Analytics
               </p>
             </div>
           </a>
@@ -163,9 +163,11 @@
               <h3 class="project-card__title">勤怠管理アプリ（学習課題）</h3>
               <p class="project-card__desc">
                 オンラインスクールCOACHTECHの課題で作成<br>
-                Laravel × Docker × MySQLで開発<br>
                 出勤・退勤・休憩打刻、修正申請、管理者による承認・修正<br>
                 までを一元管理できるWebアプリ<br>
+              </p>
+              <p class="project-card__tech">
+                Laravel / Docker / MySQL
               </p>
             </div>
           </a>
@@ -390,7 +392,7 @@
                   class="skill-card__icon">
                 <div class="skill-card__info">
                   <h3 class="skill-card__title">Flutter</h3>
-                  <p class="skill-card__stars" data-level="3">
+                  <p class="skill-card__stars" data-level="2">
                     <span class="skill-star">★</span>
                     <span class="skill-star">★</span>
                     <span class="skill-star">☆</span>
@@ -427,7 +429,7 @@
               <i class="fas fa-toolbox category-icon"></i> Tools
             </h3>
             <div class="skill-list__cards">
-              <!-- Docker -->
+              <!-- MySQL -->
               <div class="skill-card">
                 <div class="skill-card__header">
                   <img src="https://cdn.simpleicons.org/mysql/00758F" alt="MySQL" width="24" height="24"
@@ -452,6 +454,34 @@
                   </li>
                   <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
                     Laravel Eloquentとの連携を通じたDB操作実装
+                  </li>
+                </ul>
+              </div>
+
+              <!-- SQLite -->
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <img src="https://cdn.simpleicons.org/sqlite/003B57" alt="SQLite" width="24" height="24" class="skill-card__icon">
+                  <div class="skill-card__info">
+                    <h3 class="skill-card__title">SQLite</h3>
+                    <p class="skill-card__stars" data-level="2">
+                      <span class="skill-star">★</span>
+                      <span class="skill-star">★</span>
+                      <span class="skill-star">☆</span>
+                      <span class="skill-star">☆</span>
+                      <span class="skill-star">☆</span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="skill-card__description">
+                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                    Drift（SQLite）を用いたローカルDB設計
+                  </li>
+                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                    UUID管理を含む永続化処理実装
+                  </li>
+                  <li class="skill-card__description-item"><i class="fas fa-circle-check list-icon"></i>
+                    集計値を保持せず都度算出する設計
                   </li>
                 </ul>
               </div>
