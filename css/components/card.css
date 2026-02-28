@@ -1,0 +1,149 @@
+/* ===== CARD (統一スタイル) ===== */
+.card {
+  display: grid;
+  grid-template-rows: auto 6px 1fr;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  width: 100%;
+  max-width: none;
+}
+
+.card__divider {
+  grid-row: 2;
+  height: 6px;
+  background: linear-gradient(90deg, #fcb045, #fdc830);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.card__img {
+  grid-row: 1;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background-color: #f4f4f4;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card__image {
+  transform: scale(1.04);
+}
+
+.card__img--custom {
+  object-position: center top;
+}
+
+.card__body {
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+  flex-grow: 1;
+}
+
+.card__title {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  font-weight: bold;
+  padding: 16px 8px;
+}
+
+.card__desc {
+  flex-grow: 1;
+  color: #555;
+  font-size: clamp(0.85rem, 0.6vw + 0.75rem, 0.95rem);
+  padding: 0px 8px 16px 8px;
+  min-height: 4.5em;
+}
+
+.card__tech {
+  flex-grow: 1;
+  color: #555;
+  font-size: clamp(0.75rem, 0.5vw + 0.7rem, 0.85rem);
+  padding: 0px 8px 16px 8px;
+  min-height: 4.5em;
+  opacity: 0.8;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 未完製アプリ */
+.card--coming-soon {
+  position: relative;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card--coming-soon .card__img {
+  position: relative;
+}
+
+.card--coming-soon .card__img::after {
+  content: "COMING SOON...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.card--coming-soon .card__image {
+  filter: brightness(0.6);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 767px) {
+  .card {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .card__title {
+    padding: 12px 8px;
+  }
+
+  .card__desc,
+  .card__tech {
+    flex-grow: 0;
+    min-height: auto;
+  }
+
+  .card__desc {
+    padding: 0 8px 12px 8px;
+  }
+
+  .card__tech {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+  
+}
+
+/* ===== TABLET RESPONSIVE ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card {
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}

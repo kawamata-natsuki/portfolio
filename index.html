@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/components/card.css">
   <link rel="stylesheet" href="css/index.css">
 
   <!-- GoogleSearchConsole で必要だから消さない -->
@@ -81,21 +82,20 @@
       <div class="works-grid">
 
         <!-- medical-ai-system -->
-        <div class="work-card">
-          <a href="works/medical-ai-system.html" class="work-card-link">
-            <div class="work-card__img">
+        <div class="card">
+          <a href="works/medical-ai-system.html" class="card-link">
+            <div class="card__img">
               <img src="images/works/medical-ai-system.png" alt="works"
-                class="work-card__image-top work-card__img--custom">
+                class="card__image card__img--custom">
             </div>
-            <div class="work-card__divider"></div>
-            <div class="work-card__body">
-              <h3 class="work-card__title">医療業務支援AIシステム（業務委託）</h3>
-              <p class="work-card__desc">
-                既存の外部電子カルテAPI連携基盤を活用し、<br>
-                医療判定・業務支援ロジックを追加実装。<br>
-                データ構造整理とLLM入力設計によりAI応答品質を向上。
+            <div class="card__divider"></div>
+            <div class="card__body">
+              <h3 class="card__title">電子カルテAI機能拡張開発（業務委託）</h3>
+              <p class="card__desc">
+                電子カルテAPI連携基盤の拡張開発。<br>
+                医療判定ロジック追加とAI機能改善を担当。<br>
               </p>
-              <p class="work-card__tech">
+              <p class="card__tech">
                 Laravel / Livewire / MySQL / LLM API連携
               </p>
             </div>
@@ -111,21 +111,20 @@
       <div class="projects-grid">
 
         <!-- UtaMemo -->
-        <div class="project-card">
-          <a href="projects/utamemo.html" class="project-card-link">
-            <div class="project-card__img">
+        <div class="card">
+          <a href="projects/utamemo.html" class="card-link">
+            <div class="card__img">
               <img src="images/project-utamemo/feature_graphic.png" alt="UtaMemo"
-                class="project-card__image-top project-card__img--custom">
+                class="card__image card__img--custom">
             </div>
-            <div class="project-card__divider"></div>
-            <div class="project-card__body">
-              <h3 class="project-card__title">次に歌う一曲を迷わない UtaMemo</h3>
-              <p class="project-card__desc">
+            <div class="card__divider"></div>
+            <div class="card__body">
+              <h3 class="card__title">次に歌う一曲を迷わない UtaMemo</h3>
+              <p class="card__desc">
                 カラオケの採点結果を記録し、<br>
-                歌いたい曲やお気に入りの曲を整理できるアプリ。<br>
-                次に歌う一曲を迷わず選べる体験を設計しました。
+                に歌う一曲を迷わず選べるアプリ。
               </p>
-              <p class="project-card__tech">
+              <p class="card__tech">
                 Flutter /  SQLite（Drift） / Firebase Analytics
               </p>
             </div>
@@ -133,42 +132,40 @@
         </div>
 
         <!-- 飲食店予約アプリ -->
-        <div class="project-card">
-          <a href="projects/restaurant.html" class="project-card-link">
-            <div class="project-card__img">
+        <div class="card">
+          <a href="projects/restaurant.html" class="card-link">
+            <div class="card__img">
               <img src="images/project-restaurant/project-restaurant.png" alt="飲食店予約アプリ"
-                class="project-card__image-top project-card__img--custom">
+                class="card__image card__img--custom">
             </div>
-            <div class="project-card__divider"></div>
-            <div class="project-card__body">
-              <h3 class="project-card__title">店舗運営を支えるWeb予約・店舗管理システム</h3>
-              <p class="project-card__desc">
-                予約・来店管理・売上分析を一貫設計。<br>
-                QRチェックインやNO-SHOW自動判定を実装し、<br>
-                実運用を想定した業務支援基盤を構築。
+            <div class="card__divider"></div>
+            <div class="card__body">
+              <h3 class="card__title">店舗運営を支える予約・店舗管理システム</h3>
+              <p class="card__desc">
+                予約・来店・売上を一元管理。<br>
+                店舗運営を支えるWebシステム。
               </p>
-              <p class="project-card__tech">
+              <p class="card__tech">
                 Laravel / Docker / MySQL
               </p>
             </div>
           </a>
         </div>
- 
                 
         <!-- 勤怠管理アプリ -->
-        <div class="project-card">
-          <a href="projects/attendance.html" class="project-card-link">
-            <div class="project-card__img">
-              <img src="images/project-attendance/project-attendance.png" alt="勤怠管理アプリ" class="project-card__image-top">
+        <div class="card">
+          <a href="projects/attendance.html" class="card-link">
+            <div class="card__img">
+              <img src="images/project-attendance/project-attendance.png" alt="勤怠管理アプリ" class="card__image">
             </div>
-            <div class="project-card__divider"></div>
-            <div class="project-card__body">
-              <h3 class="project-card__title">勤怠管理アプリ（模擬案件）</h3>
-              <p class="project-card__desc">
-                出退勤・休憩打刻、勤怠修正申請、管理者承認機能を実装。<br>
-                MVC構造に沿った設計で、承認フローを含む勤怠管理システムを構築。<br>
+            <div class="card__divider"></div>
+            <div class="card__body">
+              <h3 class="card__title">勤怠管理アプリ（模擬案件）</h3>
+              <p class="card__desc">
+                勤怠打刻・修正申請・承認機能を実装。<br>
+                承認フローを含む勤怠管理システムを構築。
               </p>
-              <p class="project-card__tech">
+              <p class="card__tech">
                 Laravel / Docker / MySQL
               </p>
             </div>
@@ -176,20 +173,20 @@
         </div>
 
         <!-- フリマアプリ -->
-        <div class="project-card">
-          <a href="projects/fleamarket.html" class="project-card-link">
-            <div class="project-card__img">
+        <div class="card">
+          <a href="projects/fleamarket.html" class="card-link">
+            <div class="card__img">
               <img src="images/project-fleamarket/project-fleamarket.png" alt="フリマアプリ"
-                class="project-card__image-top project-card__img--custom">
+                class="card__image card__img--custom">
             </div>
-            <div class="project-card__divider"></div>
-            <div class="project-card__body">
-              <h3 class="project-card__title">フリマアプリ（模擬案件）</h3>
-              <p class="project-card__desc">
-                出品・購入・コメント・お気に入り・チャット・決済連携を実装。<br>
-                認証・権限制御を含むECアプリを構築。<br>
+            <div class="card__divider"></div>
+            <div class="card__body">
+              <h3 class="card__title">フリマアプリ（模擬案件）</h3>
+              <p class="card__desc">
+                出品・購入・チャット・決済機能を実装。<br>
+                認証・権限制御を含むECアプリを構築。
               </p>
-              <p class="project-card__tech">
+              <p class="card__tech">
                 Laravel / Docker / MySQL
               </p>
             </div>
