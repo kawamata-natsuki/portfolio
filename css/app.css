@@ -48,10 +48,13 @@ body {
 .site-footer {
   background: #333;
   color: var(--light-text);
-  padding: 1rem;
-  font-size: 1rem;
+  padding: clamp(0.8rem, 1.5vw, 1rem)
+           clamp(1rem, 3vw, 2rem);
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
   display: flex;
   justify-content: center;
+  text-align: center;
+  line-height: 1.4;
 }
 
 /* Large Desktop（1440px〜） */
@@ -60,29 +63,11 @@ body {
 /* Desktop（1025px〜1439px） */
 @media (min-width: 1025px) and (max-width: 1439px) {
 
-  /* ===== FOOTER ===== */
-  .site-footer {
-    padding: 0.9rem;
-    font-size: 0.9rem;
-  }
 
 }
 
 /* Tablet（768px〜1023px） */
 @media (min-width: 768px) and (max-width: 1023px) {
-
-  /* ===== FOOTER ===== */
-  .site-footer {
-    padding: 0.8rem;
-    font-size: 0.8rem;
-  }
-
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
 
   /* 画像とメディア要素のみ幅制限 */
   img,
@@ -114,19 +99,6 @@ body {
 
 /* Mobile（〜767px） */
 @media (max-width: 767px) {
-
-  /* ===== FOOTER ===== */
-  .site-footer {
-    padding: 0.8rem;
-    font-size: 0.8rem;
-  }
-
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
 
   /* 画像とメディア要素のみ幅制限 */
   img,
