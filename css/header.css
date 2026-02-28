@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: clamp(64px, 6vw, 80px);
   background: #333;
   z-index: var(--z-header, 1000);
 }
@@ -15,14 +15,14 @@
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 clamp(12px, 4vw, 40px);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .site-header__logo {
-  font-size: 2rem;
+  font-size: clamp(1rem, 2.5vw, 2rem);
   font-weight: bold;
   color: var(--light-text);
 }
@@ -65,13 +65,13 @@ body.no-scroll {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  gap: 25px;
+  gap: clamp(12px, 2vw, 25px);
 }
 
 .site-header__nav-link {
   color: var(--light-text);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 1.4vw, 1.2rem);
   transition: color 0.3s;
   color: rgba(255,255,255,1);
   font-weight: 500;
@@ -85,93 +85,31 @@ body.no-scroll {
 }
 
 /* Desktop（1025px〜1439px） */
-@media (min-width: 1025px) and (max-width: 1439px) {
-
-  /* ===== HEADER ===== */
-  .site-header {
-    height: 70px;
-  }
-
-  .site-header__inner {
-    max-width: 1000px;
-    padding: 0 40px;
-  }
-
-  .site-header__logo {
-    font-size: 1.8rem;
-  }
-
-  .site-header__nav-list {
-    gap: 20px;
-  }
-
-  .site-header__nav-link {
-    font-size: 1.1rem;
-    border-bottom: none;
-  }
-
-}
+@media (min-width: 1025px) and (max-width: 1439px) {}
 
 /* Tablet（768px〜1023px） */
-@media (min-width: 768px) and (max-width: 1023px) {
-
-  /* ===== HEADER ===== */
-  .site-header {
-    height: 70px;
-  }
-
-  .site-header__inner {
-    max-width: 740px;
-    padding: 0;
-  }
-
-  .site-header__logo {
-    font-size: 1.5rem;
-  }
-
-  .site-header__nav-list {
-    gap: 16px;
-  }
-
-  .site-header__nav-link {
-    font-size: 1rem;
-    border-bottom: none;
-  }
-
-}
+@media (min-width: 768px) and (max-width: 1023px) {}
 
 /* Mobile（〜767px） */
 @media (max-width: 767px) {
 
   /* ===== HEADER ===== */
-  .site-header {
-    height: 70px;
-    overflow: visible;
-  }
-
   .site-header__inner {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 20px 0 12px;
     gap: 8px;
     overflow: visible;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   .site-header__logo {
-    font-size: 1rem;
     flex: 0 1 auto;   
     min-width: 0; 
     max-width: calc(100% - 52px); 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 32px;
     display: flex;
     align-items: center;
-    height: 32px;
+    line-height: 1;
+    height: auto;
   }
 
   .site-header__nav-drawer__overlay {
@@ -243,7 +181,6 @@ body.no-scroll {
   .site-header__nav-list {
     flex-direction: column;
     align-items: center;
-    gap: 0;
     max-width: 260px;
     margin: 0 auto;
   }
@@ -252,7 +189,6 @@ body.no-scroll {
     display: block;
     width: 100%;
     padding: 12px 2px;
-    font-size: 1.1rem;
     color: rgba(255,255,255,1);
     font-weight: 500;
     border-bottom: 1px solid rgba(255,255,255,0.15);
