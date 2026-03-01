@@ -288,7 +288,7 @@
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  align-items: stretch;
+  align-items: start;
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px 0;
@@ -299,16 +299,16 @@
 .skill-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
   width: 100%;
-  max-width: 350px;
-  height: 100%;
+  max-width: none;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   justify-self: start;
+  align-self: start;
 }
 
 .skill-card__header {
@@ -347,7 +347,6 @@
   font-size: 0.95rem;
   line-height: 1.4;
   text-align: left;
-  flex-grow: 1;
   list-style: none;
   padding-left: 0;
 }
@@ -393,24 +392,32 @@
 }
 
 .skill-rating-guide__item {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: start;
+  gap: 8px;
   margin-bottom: 4px;
   font-size: 0.85rem;
   line-height: 1.4;
   color: #333;
 }
 
+.skill-rating-guide__stars {
+  line-height: 1.4;
+  display: inline-flex;
+  gap: 1px;
+}
+
 .star-guide {
   color: #e6b800;
   font-size: 0.9rem;
-  line-height: 1;
+  line-height: inherit;
   margin-right: 1px;
   letter-spacing: -0.03em;
 }
 
 .skill-rating-guide__label {
-  margin-left: 4px;
+  line-height: 1.4;
 }
 
 .tooltip {
@@ -471,6 +478,7 @@
   width: 400px;
   aspect-ratio: 1 / 1;
 }
+
 
 /* ===== CONTACT SECTION ===== */
 :root {
@@ -654,8 +662,9 @@
 
   .skill-card {
     width: 100%;
-    max-width: calc(50% - 8px);
-    min-width: 300px;
+    height: auto;
+    max-width: 100%;
+    min-width: 0;
     box-sizing: border-box;
   }
 
@@ -727,7 +736,7 @@
 
   .about-section__photo {
     width: 100%;
-    max-width: 280px;
+    max-width: 200px;
     margin-bottom: 4px;
   }
 
@@ -787,16 +796,19 @@
 
   .skill-list__cards {
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 16px 0;
+    justify-content: start; 
+    gap: 36px;
+    padding: 16px 12px;
     width: 100%;
     max-width: 100%;
+    align-items: start; 
   }
 
   .skill-card {
     width: 100%;
+    height: auto !important;
     max-width: 100%;
-    padding: 12px;
+    padding: 12px 8px;
     min-width: 0;
     box-sizing: border-box;
   }
@@ -817,7 +829,15 @@
   .skill-rating-guide {
     max-width: 100%;
     margin-left: 0;
-    padding: 12px;
+    padding: 12px 8px;
+  }
+
+  .star-guide {
+    font-size: 0.8rem;
+  }
+
+  .skill-rating-guide__label {
+    font-size: 0.8rem;
   }
 
   .contact-section__text {
