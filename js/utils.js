@@ -294,6 +294,33 @@ function initImageModal() {
     }
   });
 
+  // --- 1本指ドラッグ（スマホ） ---
+  modalImg.addEventListener('touchstart', (e) => {
+    if (scale <= 1) return;
+  
+    if (e.touches.length === 1) {
+      isDragging = true;
+      startX = e.touches[0].clientX - translateX;
+      startY = e.touches[0].clientY - translateY;
+      updateCursor();
+    }
+  });
+  
+  modalImg.addEventListener('touchmove', (e) => {
+    if (!isDragging || scale <= 1 || e.touches.length !== 1) return;
+  
+    e.preventDefault(); // ← 超重要（スクロール防止）
+  
+    translateX = e.touches[0].clientX - startX;
+    translateY = e.touches[0].clientY - startY;
+    updateTransform();
+  });
+  
+  modalImg.addEventListener('touchend', () => {
+    isDragging = false;
+    updateCursor();
+  });
+
   // 閉じる
   closeBtn.addEventListener('click', () => {
     modal.classList.remove('show');
