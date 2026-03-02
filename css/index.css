@@ -10,7 +10,6 @@
   text-align: center;
   color: var(--light-text);
   z-index: 0;
-  will-change: transform;
 }
 
 .home-section__content {
@@ -63,8 +62,6 @@
   animation: animate 15s linear infinite;
   bottom: -150px;
   border-radius: 20%;
-  will-change: transform, opacity;
-  transform: translateZ(0);
 }
 
 .home-bg__shapes li:nth-child(1) {
