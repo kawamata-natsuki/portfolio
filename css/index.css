@@ -42,7 +42,6 @@
   height: 100%;
   background: linear-gradient(to left, var(--main-yellow-light), var(--main-yellow-deep));
   z-index: 1;
-  position: fixed;
 }
 
 .home-bg__shapes {
@@ -475,8 +474,13 @@
 }
 
 .about-section__photo {
-  width: 300px;
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 
