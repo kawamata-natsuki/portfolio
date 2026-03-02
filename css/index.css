@@ -479,8 +479,6 @@
   height: auto;
   display: block;
   margin: 0 auto;
-  transform: translateZ(0);
-  will-change: transform;
 }
 
 
