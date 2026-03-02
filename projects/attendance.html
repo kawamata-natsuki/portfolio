@@ -62,51 +62,48 @@
         <div class="swiper-wrapper">
           <!-- 各スライド -->
           <div class="swiper-slide" data-caption="ユーザー画面：ログイン">
-            <img src="../images/project-attendance/screen1.png" alt="ユーザー画面：ログイン">
+            <img src="../images/project-attendance/screen1.png" alt="ユーザー画面：ログイン" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="ユーザー画面：ユーザー登録画面">
-            <img src="../images/project-attendance/screen2.png" alt="ユーザー画面：ユーザー登録画面">
+            <img src="../images/project-attendance/screen2.png" alt="ユーザー画面：ユーザー登録画面" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="ユーザー画面：打刻画面（Vite + JavaScript によるリアルタイム時計表示）">
-            <img src="../images/project-attendance/screen3.png" alt="ユーザー画面：打刻画面">
+            <img src="../images/project-attendance/screen3.png" alt="ユーザー画面：打刻画面" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="ユーザー画面：勤怠一覧画面（月次）">
-            <img src="../images/project-attendance/screen4.png" alt="ユーザー画面：勤怠一覧画面（月次）">
+            <img src="../images/project-attendance/screen4.png" alt="ユーザー画面：勤怠一覧画面（月次）" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="ユーザー画面：勤怠詳細（修正申請）画面">
-            <img src="../images/project-attendance/screen5.png" alt="ユーザー画面：勤怠詳細（修正申請）画面">
+            <img src="../images/project-attendance/screen5.png" alt="ユーザー画面：勤怠詳細（修正申請）画面" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="ユーザー画面：申請一覧（承認待ち）画面">
-            <img src="../images/project-attendance/screen6.png" alt="ユーザー画面：申請一覧（承認待ち）画面">
+            <img src="../images/project-attendance/screen6.png" alt="ユーザー画面：申請一覧（承認待ち）画面" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="ユーザー画面：申請一覧（承認済み）画面">
-            <img src="../images/project-attendance/screen14.png" alt="ユーザー画面：申請一覧（承認済み）画面">
+            <img src="../images/project-attendance/screen14.png" alt="ユーザー画面：申請一覧（承認済み）画面" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="管理者画面：ログイン">
-            <img src="../images/project-attendance/screen7.png" alt="管理者画面：ログイン">
+            <img src="../images/project-attendance/screen7.png" alt="管理者画面：ログイン" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="管理者画面：勤怠一覧（日次）">
-            <img src="../images/project-attendance/screen8.png" alt="管理者画面：勤怠一覧（日次）">
+            <img src="../images/project-attendance/screen8.png" alt="管理者画面：勤怠一覧（日次）" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="管理者画面：スタッフ一覧画面">
-            <img src="../images/project-attendance/screen10.png" alt="">
+            <img src="../images/project-attendance/screen10.png" alt="" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="管理者画面：勤怠詳細（修正）画面">
-            <img src="../images/project-attendance/screen9.png" alt="管理者画面：勤怠詳細（修正）画面">
+            <img src="../images/project-attendance/screen9.png" alt="管理者画面：勤怠詳細（修正）画面" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="管理者画面：申請一覧（承認待ち）画面">
-            <img src="../images/project-attendance/screen11.png" alt="管理者画面：申請一覧（承認待ち）画面">
+            <img src="../images/project-attendance/screen11.png" alt="管理者画面：申請一覧（承認待ち）画面" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="管理者画面：申請承認画面">
-            <img src="../images/project-attendance/screen12.png" alt="管理者画面：申請承認画面">
+            <img src="../images/project-attendance/screen12.png" alt="管理者画面：申請承認画面" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="管理者画面：申請一覧（承認済み）画面">
-            <img src="../images/project-attendance/screen13.png" alt="">
+            <img src="../images/project-attendance/screen13.png" alt="管理者画面：申請一覧（承認済み）画面" data-zoom>
           </div>
         </div>
-        <!-- ナビゲーションボタン -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
       <!-- ページネーション・キャプション（swiper外に出してナビボタン位置を画像中央に） -->
       <div class="swiper-extra">
@@ -256,6 +253,11 @@
       });
     }
   </script>
+
+  <div class="image-modal" id="imageModal">
+    <span class="image-modal__close">&times;</span>
+    <img class="image-modal__content" id="modalImage">
+  </div>
 
 </body>
 

@@ -54,14 +54,18 @@
     <div class="work-detail__container">
       <div class="work-detail__header">
         <h1 class="work-detail__title">
-          医療業務支援AIシステム（業務委託）
+          電子カルテAI機能拡張開発
           <span class="work-detail__tag">Work</span>
         </h1>
       </div>
 
       <!-- メイン画像コンテナ -->
       <div class="work-main-image">
-        <img class="work-main-image__img" src="../images/works/medical-ai-system.png" alt="医療業務支援AIシステム（業務委託）">
+        <img class="work-main-image__img"
+             src="../images/works/medical-ai-system.png"
+             alt="医療業務支援AIシステム"
+             data-zoom
+             >
       </div>
 
       <!-- 期間 -->
@@ -178,6 +182,11 @@
       });
     }
   </script>
+
+  <div class="image-modal" id="imageModal">
+    <span class="image-modal__close">&times;</span>
+    <img class="image-modal__content" id="modalImage">
+  </div>
 </body>
 
 </html>

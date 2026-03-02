@@ -175,5 +175,9 @@
       });
     });
   }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initImageModal();
+  });
 })();
 

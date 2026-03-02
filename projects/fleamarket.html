@@ -61,51 +61,48 @@
         <div class="swiper-wrapper">
           <!-- 各スライド -->
           <div class="swiper-slide" data-caption="ログイン">
-            <img src="../images/project-fleamarket/screen1.png" alt="ログイン">
+            <img src="../images/project-fleamarket/screen1.png" alt="ログイン" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="会員登録">
-            <img src="../images/project-fleamarket/screen2.png" alt="会員登録">
+            <img src="../images/project-fleamarket/screen2.png" alt="会員登録" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="商品一覧">
-            <img src="../images/project-fleamarket/screen3.png" alt="商品一覧">
+            <img src="../images/project-fleamarket/screen3.png" alt="商品一覧" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="商品詳細①">
-            <img src="../images/project-fleamarket/screen4-1.png" alt="商品詳細①">
+            <img src="../images/project-fleamarket/screen4-1.png" alt="商品詳細①" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="商品詳細②">
-            <img src="../images/project-fleamarket/screen4-2.png" alt="商品詳細②">
+            <img src="../images/project-fleamarket/screen4-2.png" alt="商品詳細②" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="商品購入">
-            <img src="../images/project-fleamarket/screen5.png" alt="商品購入">
+            <img src="../images/project-fleamarket/screen5.png" alt="商品購入" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="決済（Stripe）">
-            <img src="../images/project-fleamarket/screen6.png" alt="決済（Stripe）">
+            <img src="../images/project-fleamarket/screen6.png" alt="決済（Stripe）" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="購入完了">
-            <img src="../images/project-fleamarket/screen7.png" alt="購入完了">
+            <img src="../images/project-fleamarket/screen7.png" alt="購入完了" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="出品①">
-            <img src="../images/project-fleamarket/screen8-1.png" alt="出品①">
+            <img src="../images/project-fleamarket/screen8-1.png" alt="出品①" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="出品②">
-            <img src="../images/project-fleamarket/screen8-2.png" alt="出品②">
+            <img src="../images/project-fleamarket/screen8-2.png" alt="出品②" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="購入後チャット">
-            <img src="../images/project-fleamarket/screen9.png" alt="購入後チャット">
+            <img src="../images/project-fleamarket/screen9.png" alt="購入後チャット" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="取引レビュー入力">
-            <img src="../images/project-fleamarket/screen10.png" alt="取引レビュー入力">
+            <img src="../images/project-fleamarket/screen10.png" alt="取引レビュー入力" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="マイページ">
-            <img src="../images/project-fleamarket/screen11.png" alt="マイページ">
+            <img src="../images/project-fleamarket/screen11.png" alt="マイページ" data-zoom>
           </div>
           <div class="swiper-slide" data-caption="プロフィール編集（画像トリミング）">
-            <img src="../images/project-fleamarket/screen12.png" alt="プロフィール編集（画像トリミング）">
+            <img src="../images/project-fleamarket/screen12.png" alt="プロフィール編集（画像トリミング）" data-zoom>
           </div>
         </div>
-        <!-- ナビゲーションボタン -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
       <!-- ページネーション・キャプション（swiper外に出してナビボタン位置を画像中央に） -->
       <div class="swiper-extra">
@@ -249,6 +246,11 @@
       });
     }
   </script>
+
+  <div class="image-modal" id="imageModal">
+    <span class="image-modal__close">&times;</span>
+    <img class="image-modal__content" id="modalImage">
+  </div>
 
 </body>
 

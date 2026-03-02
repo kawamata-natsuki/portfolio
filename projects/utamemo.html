@@ -62,21 +62,18 @@
         <div class="swiper-wrapper">
           <!-- 各スライド -->
           <div class="swiper-slide utamemo-swiper-slide" data-caption="曲一覧画面">
-            <img src="../images/project-utamemo/Screen1.png" alt="曲一覧画面">
+            <img src="../images/project-utamemo/Screen1.png" alt="曲一覧画面" data-zoom>
           </div>
           <div class="swiper-slide utamemo-swiper-slide" data-caption="曲詳細画面">
-            <img src="../images/project-utamemo/Screen2.png" alt="曲詳細画面">
+            <img  src="../images/project-utamemo/Screen2.png" alt="曲詳細画面" data-zoom>
           </div>
           <div class="swiper-slide utamemo-swiper-slide" data-caption="採点追加画面">
-            <img src="../images/project-utamemo/Screen3.png" alt="採点追加画面">
+            <img src="../images/project-utamemo/Screen3.png" alt="採点追加画面" data-zoom>
           </div>
           <div class="swiper-slide utamemo-swiper-slide" data-caption="曲追加画面">
-            <img src="../images/project-utamemo/Screen4.png" alt="曲追加画面">
+            <img src="../images/project-utamemo/Screen4.png" alt="曲追加画面" data-zoom>
           </div>
         </div>
-        <!-- ナビゲーションボタン -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
       <!-- ページネーション・キャプション（swiper外に出してナビボタン位置を画像中央に） -->
       <div class="swiper-extra">
@@ -223,6 +220,11 @@
       });
     }
   </script>
+
+  <div class="image-modal" id="imageModal">
+    <span class="image-modal__close">&times;</span>
+    <img class="image-modal__content" id="modalImage">
+  </div>
 
 </body>
 
