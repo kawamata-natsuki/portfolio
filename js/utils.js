@@ -117,6 +117,9 @@ function setEqualSkillCardHeight() {
   });
 }
 
+/**
+ * 画像モーダルの初期化
+ */
 function initImageModal() {
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('modalImage');
@@ -134,12 +137,14 @@ function initImageModal() {
   let initialDistance = 0;
   let initialScale = 1;
 
+  // 画像の位置を更新する関数
   function updateTransform() {
     clampPosition();
     modalImg.style.transform =
       `translate(${translateX}px, ${translateY}px) scale(${scale})`;
   }
 
+  // 画像の位置をリセットする関数
   function resetTransform() {
     scale = 1;
     translateX = 0;
@@ -148,6 +153,7 @@ function initImageModal() {
     updateCursor();
   }
 
+  // カーソルを更新する関数
   function updateCursor() {
     if (scale > 1) {
       modalImg.style.cursor = isDragging ? 'grabbing' : 'grab';
@@ -156,7 +162,7 @@ function initImageModal() {
     }
   }
 
-  // 画像の位置をクランプする関数
+  // 画像の位置をクランプ（制限）する関数
   function clampPosition() {
     const rect = modalImg.getBoundingClientRect();
   
@@ -297,7 +303,7 @@ function initImageModal() {
   // --- 1本指ドラッグ（スマホ） ---
   modalImg.addEventListener('touchstart', (e) => {
     if (scale <= 1) return;
-  
+
     if (e.touches.length === 1) {
       isDragging = true;
       startX = e.touches[0].clientX - translateX;
@@ -305,17 +311,19 @@ function initImageModal() {
       updateCursor();
     }
   });
-  
+
+  // 1本指ドラッグ（スマホ）
   modalImg.addEventListener('touchmove', (e) => {
     if (!isDragging || scale <= 1 || e.touches.length !== 1) return;
-  
+
     e.preventDefault(); // ← 超重要（スクロール防止）
-  
+
     translateX = e.touches[0].clientX - startX;
     translateY = e.touches[0].clientY - startY;
     updateTransform();
   });
-  
+
+  // 1本指ドラッグ（スマホ）終了
   modalImg.addEventListener('touchend', () => {
     isDragging = false;
     updateCursor();
@@ -327,6 +335,7 @@ function initImageModal() {
     resetTransform();
   });
 
+  // モーダルクリック
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
       modal.classList.remove('show');
@@ -334,6 +343,7 @@ function initImageModal() {
     }
   });
 
+  // エスケープキーで閉じる
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       modal.classList.remove('show');
@@ -342,5 +352,5 @@ function initImageModal() {
   });
 }
 
-// 年を表示
+// 年を表示（フッター用）
 document.getElementById("year").textContent = new Date().getFullYear();
