@@ -1,8 +1,9 @@
 /* ===== HOME SECTION ===== */
 .home-section {
   position: relative;
-  height: 100vh;
-  min-height: 100svh;
+  height: auto;
+  padding: 120px 20px;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
