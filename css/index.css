@@ -439,7 +439,6 @@
   display: block;
 }
 
-
 /* ===== ABOUT SECTION ===== */
 .about-section__title {
   text-transform: uppercase;
@@ -476,7 +475,7 @@
 }
 
 .about-section__photo {
-  width: 400px;
+  width: 300px;
   aspect-ratio: 1 / 1;
 }
 
@@ -636,8 +635,7 @@
   }
 
   .about-section__photo {
-    width: 100%;
-    max-width: 300px;
+    max-width: 250px;
   }
 
   .skill-section {
@@ -736,7 +734,6 @@
   }
 
   .about-section__photo {
-    width: 100%;
     max-width: 200px;
     margin-bottom: 4px;
   }
