@@ -314,3 +314,6 @@ function initImageModal() {
     }
   });
 }
+
+// 年を表示
+document.getElementById("year").textContent = new Date().getFullYear();
